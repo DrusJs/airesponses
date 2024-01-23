@@ -1,18 +1,22 @@
 :root {
-    --color-white: #fff;
+    --color-white: #FFFFFF;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
 }
+
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: red;
-}
-.wrapper .main {
-    flex: 1 0 auto;
-}
-.wrapper .footer {
-    flex-shrink: 0;
+    
+    .main {
+        flex: 1 0 auto;
+    }
+
+    .footer {
+        flex-shrink: 0;
+    }
 }
