@@ -11,7 +11,7 @@
         <!-- Шрифты -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <!-- Стили -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.scss">        
@@ -19,11 +19,135 @@
     <body>
         <div class="wrapper">
             <header class="header">
-
+                <div class="header-wrapper">
+                    <div class="container d-flex align-items-center justify-content-between">
+                        <div class="logo"><img src="images/logo.svg" alt="airesponses"></div>
+                        <div class="header-select">
+                            <div class="header-select-head d-flex align-items-center gap-2">
+                                <img src="images/wb.jpg" alt="WB">
+                                <div class="header-select-head__text">ИП Шишкова О.П.</div>
+                            </div>
+                            <div class="header-select-dropdown d-none flex-column">
+                                <div class="header-select-dropdown__item d-flex align-items-center gap-3">
+                                    <img src="images/ozon.svg" alt="">
+                                    <div class="text">ozon.ru ozon.ru ozon.ru ozon.ru ozon.ru</div>
+                                </div>
+                                <div class="header-select-dropdown__item d-flex align-items-center gap-3">
+                                    <img src="images/WB.jpg" alt="">
+                                    <div class="text">WB ИП Шишкова О.П.</div>
+                                </div>
+                                <button class="header-select-dropdown__button d-flex align-items-center gap-3">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.6 8.8H7.2V10.4C7.2 10.6122 7.28429 10.8157 7.43431 10.9657C7.58434 11.1157 7.78783 11.2 8 11.2C8.21217 11.2 8.41566 11.1157 8.56569 10.9657C8.71571 10.8157 8.8 10.6122 8.8 10.4V8.8H10.4C10.6122 8.8 10.8157 8.71571 10.9657 8.56569C11.1157 8.41566 11.2 8.21217 11.2 8C11.2 7.78783 11.1157 7.58434 10.9657 7.43431C10.8157 7.28429 10.6122 7.2 10.4 7.2H8.8V5.6C8.8 5.38783 8.71571 5.18434 8.56569 5.03431C8.41566 4.88429 8.21217 4.8 8 4.8C7.78783 4.8 7.58434 4.88429 7.43431 5.03431C7.28429 5.18434 7.2 5.38783 7.2 5.6V7.2H5.6C5.38783 7.2 5.18434 7.28429 5.03431 7.43431C4.88429 7.58434 4.8 7.78783 4.8 8C4.8 8.21217 4.88429 8.41566 5.03431 8.56569C5.18434 8.71571 5.38783 8.8 5.6 8.8ZM15.2 0H0.8C0.587827 0 0.384344 0.0842854 0.234315 0.234315C0.0842854 0.384344 0 0.587827 0 0.8V15.2C0 15.4122 0.0842854 15.6157 0.234315 15.7657C0.384344 15.9157 0.587827 16 0.8 16H15.2C15.4122 16 15.6157 15.9157 15.7657 15.7657C15.9157 15.6157 16 15.4122 16 15.2V0.8C16 0.587827 15.9157 0.384344 15.7657 0.234315C15.6157 0.0842854 15.4122 0 15.2 0ZM14.4 14.4H1.6V1.6H14.4V14.4Z" fill="#61CDA6"/>
+                                    </svg>                                        
+                                    Добавить магазин
+                                </button>
+                                <button class="header-select-dropdown__button">Все магазины</button>
+                            </div>
+                        </div>
+                        <div class="burger-button d-flex flex-column justify-content-between">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="burger-menu d-none flex-column justify-content-between">
+                            <nav>
+                                <ul class="burger-menu-list d-flex flex-column">
+                                    <li class="burger-menu-list_item active"><a href="#">Личный кабинет</a></li>
+                                    <li class="burger-menu-list_item"><a href="#">Баланс</a></li>
+                                    <li class="burger-menu-list_item"><a href="#">Уведомления</a></li>
+                                    <li class="burger-menu-list_item"><a href="#">Настройки магазина</a></li>
+                                </ul>
+                            </nav>
+                            <a href="#" class="logout-button">Выйти</a>
+                        </div>
+                    </div>
+                </div>                
             </header>
 
             <main class="main">
-
+                <div class="container">
+                    <button class="primary-button fit d-none">к списку магазинов</button>
+                    <h1 class="title mt-4 mb-3">Все магазины</h1>
+                    <button class="primary-button uppercase mb-4">к списку магазинов</button>
+                    <table class="shops-table">
+                        <tr class="shops-table-row">
+                            <th class="shops-table-head">Наименование организации</th>
+                            <th class="shops-table-head">Авторизовано</th>
+                            <th class="shops-table-head">Активных товаров</th>
+                            <th class="shops-table-head">Отзывы без ответа</th>
+                            <th class="shops-table-head">Неотправленных отзывов</th>
+                            <th class="shops-table-head">Действия</th>
+                        </tr>
+                        <tr class="shops-table-row">
+                            <td class="shops-table-cell">
+                                <img src="images/wb.jpg" alt="WB">
+                                <span class="name">ИП Шишкова О.П.</span>
+                            </td>
+                            <td class="shops-table-cell"><img src="images/check icon.svg" alt=""></td>
+                            <td class="shops-table-cell">8</td>
+                            <td class="shops-table-cell">0</td>
+                            <td class="shops-table-cell">16</td>
+                            <td class="shops-table-cell">
+                                <button class="edit"></button>
+                                <button class="delete"></button>
+                            </td>
+                        </tr>
+                        <tr class="shops-table-row">
+                            <td class="shops-table-cell">
+                                <img src="images/ozon.svg" alt="OZON">
+                                <span class="name">OOO OZON</span>
+                            </td>
+                            <td class="shops-table-cell"><img src="images/check icon.svg" alt=""></td>
+                            <td class="shops-table-cell">9</td>
+                            <td class="shops-table-cell">0</td>
+                            <td class="shops-table-cell">42</td>
+                            <td class="shops-table-cell">
+                                <button class="edit"></button>
+                                <button class="delete"></button>
+                            </td>
+                        </tr>
+                        <tr class="shops-table-row">
+                            <td class="shops-table-cell">
+                                <img src="images/wb.jpg" alt="WB">
+                                <span class="name">ООО Новая</span>
+                            </td>
+                            <td class="shops-table-cell"><img src="images/check icon.svg" alt=""></td>
+                            <td class="shops-table-cell" colspan="3">
+                                <div class="loader"></div>
+                                Немного подождите, мы загружаем отзывы
+                            </td>
+                            <td class="shops-table-cell">
+                                <button class="edit"></button>
+                                <button class="delete"></button>
+                            </td>
+                        </tr>
+                        <tr class="shops-table-row">
+                            <td class="shops-table-cell">
+                                <img src="images/ozon.svg" alt="OZON">
+                                <span class="name">Магазин OZON</span>
+                            </td>
+                            <td class="shops-table-cell"><img src="images/check icon.svg" alt=""></td>
+                            <td class="shops-table-cell" colspan="3"><a href="">Для авторизации магазина Ozon напишите нам в чат поддержки  в Telegram  https://t.me/airesponses</a></td>
+                            <td class="shops-table-cell">
+                                <button class="edit"></button>
+                                <button class="delete"></button>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pagination d-flex align-items-center justify-content-center gap-2 mt-3">
+                        <div class="pagination-button left"></div>
+                        <div class="pagination__item active">1</div>
+                        <div class="pagination__item d-none">...</div>
+                        <div class="pagination__item">2</div>
+                        <div class="pagination__item">3</div>
+                        <div class="pagination__item">4</div>
+                        <div class="pagination__item">5</div>
+                        <div class="pagination__item">...</div>
+                        <div class="pagination__item">23</div>
+                        <div class="pagination-button right"></div>
+                    </div>
+                </div>                
             </main>
             
             <footer class="footer">
