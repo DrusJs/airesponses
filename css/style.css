@@ -53,11 +53,73 @@ h1.title {
     height: 20px;
     cursor: pointer;
 }
+.header .header-wrapper .burger-button.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+}
+.header .header-wrapper .burger-button.active .bar:nth-child(2) {
+    height: 0;
+    min-height: 0;
+}
+.header .header-wrapper .burger-button.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-42deg);
+    -ms-transform: translateY(-8px) rotate(-42deg);
+    transform: translateY(-8px) rotate(-42deg);
+}
 .header .header-wrapper .burger-button .bar {
     width: 30px;
     min-height: 4px;
     border-radius: 2px;
     background-color: #45ffcd;
+    transition: var(--transition-primary);
+}
+.header .header-wrapper .burger-blur {
+    position: fixed;
+    top: 70px;
+    bottom: 70px;
+    width: 100%;
+    height: calc(100% - 70px);
+    left: 0;
+    z-index: 10;
+    backdrop-filter: blur(2px);
+    transition: var(--transition-primary);
+    opacity: 0;
+    pointer-events: none;
+}
+.header .header-wrapper .burger-blur.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.header .header-wrapper .burger-blur.active .burger-menu {
+    transform: translateX(0);
+}
+.header .header-wrapper .burger-menu {
+    background-color: var(--color-white);
+    padding: 20px 15px 30px;
+    min-width: 150px;
+    transition: var(--transition-primary);
+    transform: translateX(100%);
+}
+.header .header-wrapper .burger-menu .burger-menu-list {
+    list-style: none;
+}
+.header .header-wrapper .burger-menu .burger-menu-list .burger-menu-list__item {
+    color: var(--color-text-primary);
+    font-weight: 600;
+    padding: 4px 0;
+}
+.header .header-wrapper .burger-menu .burger-menu-list .burger-menu-list__item a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+.header .header-wrapper .burger-menu .burger-menu-list .burger-menu-list__item.active a {
+    color: var(--color-button-primary);
+}
+.header .header-wrapper .burger-menu .logout-button {
+    color: #ff6c6c;
+    font-weight: 600;
+    text-decoration: none;
 }
 .main {
     flex: 1 0 auto;

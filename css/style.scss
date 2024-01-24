@@ -61,12 +61,79 @@ h1.title {
         .burger-button {
             height: 20px;
             cursor: pointer;
-    
+            &.active {
+                .bar:nth-child(1) {
+                    -webkit-transform: translateY(8px) rotate(45deg);
+                    -ms-transform: translateY(8px) rotate(45deg);
+                    transform: translateY(8px) rotate(45deg);
+                }
+                .bar:nth-child(2) {
+                    height: 0;
+                    min-height: 0;
+                }
+                .bar:nth-child(3) {
+                    -webkit-transform: translateY(-8px) rotate(-42deg);
+                    -ms-transform: translateY(-8px) rotate(-42deg);
+                    transform: translateY(-8px) rotate(-42deg);
+                }
+            }
             .bar {
                 width: 30px;
                 min-height: 4px;
                 border-radius: 2px;
                 background-color: #45FFCD;
+                transition: var(--transition-primary);
+            }
+        }
+        .burger-blur {
+            position: fixed;
+            top: 70px;
+            bottom: 70px;
+            width: 100%;
+            height: calc(100% - 70px);
+            left: 0;
+            z-index: 10;
+            backdrop-filter: blur(2px);
+            transition: var(--transition-primary);
+            opacity: 0;
+            pointer-events: none;
+            &.active {
+                opacity: 1;
+                pointer-events: all;
+                .burger-menu {
+                    transform: translateX(0);
+                }
+            }
+        }
+        .burger-menu {
+            background-color: var(--color-white);
+            padding: 20px 15px 30px;
+            min-width: 150px;
+            transition: var(--transition-primary);
+            transform: translateX(100%);
+
+            .burger-menu-list {
+                list-style: none;
+                .burger-menu-list__item {
+                    color: var(--color-text-primary);
+                    font-weight: 600;
+                    padding: 4px 0;
+
+                    a {
+                        color: var(--color-text-primary);
+                        text-decoration: none;
+                    }
+
+                    &.active a {
+                        color: var(--color-button-primary);
+                    }
+                }
+            }
+
+            .logout-button {
+                color: #FF6C6C;
+                font-weight: 600;
+                text-decoration: none;
             }
         }
     }
