@@ -1,18 +1,181 @@
 :root {
     --color-white: #fff;
+    --color-text-primary: #666676;
+    --color-button-primary: #61cda6;
+    --color-button-primary-hover: #47b08b;
+    --transition-primary: 260ms ease-in-out;
 }
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 12px;
 }
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: red;
 }
-.wrapper .main {
+h1.title {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+}
+.header .header-wrapper {
+    padding: 14px 16px;
+    background-color: #4b4aef;
+}
+.header .header-wrapper .header-select .header-select-head {
+    color: #fff;
+    width: 120px;
+    padding: 4px 20px 4px 4px;
+    background: #7675f9;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.header .header-wrapper .header-select .header-select-head .header-select-head__text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 65%;
+}
+.header .header-wrapper .header-select .header-select-head::after {
+    content: "";
+    min-width: 12px;
+    position: absolute;
+    right: 6px;
+    height: 5px;
+    background-image: url(../images/selectArrow.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.header .header-wrapper .burger-button {
+    height: 20px;
+    cursor: pointer;
+}
+.header .header-wrapper .burger-button .bar {
+    width: 30px;
+    min-height: 4px;
+    border-radius: 2px;
+    background-color: #45ffcd;
+}
+.main {
     flex: 1 0 auto;
 }
-.wrapper .footer {
+.shops-table {
+    color: var(--color-text-primary);
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #a8a8be;
+}
+.shops-table .shops-table-row .shops-table-head {
+    font-weight: 600;
+    font-size: 12px;
+    border: 1px solid #a8a8be;
+    padding: 10px 15px;
+}
+.shops-table .shops-table-row .shops-table-cell {
+    border: 1px solid #a8a8be;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 15px;
+}
+.shops-table .shops-table-row .shops-table-cell .name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+}
+.shops-table .shops-table-row .shops-table-cell button.delete {
+    background-color: transparent;
+    border: none;
+    width: 14px;
+    height: 14px;
+    background-image: url(../images/deleteTableIcon.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.shops-table .shops-table-row .shops-table-cell button.edit {
+    background-color: transparent;
+    border: none;
+    width: 14px;
+    height: 14px;
+    background-image: url(../images/editTableIcon.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.primary-button {
+    padding: 10px 15px;
+    color: var(--color-white);
+    background-color: var(--color-button-primary);
+    transition: var(--transition-primary);
+    width: fit-content;
+    border: none;
+    border-radius: 50px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.primary-button.large {
+    padding: 16px 45px;
+}
+.primary-button.long {
+    width: 100%;
+    text-align: center;
+}
+.primary-button.uppercase {
+    text-transform: uppercase;
+}
+.primary-button.border-button {
+    border: 1px solid var(--color-button-primary);
+    color: var(--color-button-primary);
+    background-color: var(--color-white);
+}
+.primary-button:hover {
+    background-color: var(--color-button-primary-hover);
+}
+.primary-button.border-button:hover {
+    border: 1px solid var(--color-button-primary-hover);
+    color: var(--color-white);
+    background-color: var(--color-button-primary-hover);
+}
+.footer {
     flex-shrink: 0;
+}
+.pagination .pagination__item {
+    font-size: 16px;
+    font-weight: 700;
+    color: #a8a8be;
+}
+.pagination .pagination__item.active {
+    color: var(--color-text-primary);
+}
+.pagination .pagination-button {
+    width: 40px;
+    height: 6px;
+    background-image: url(../images/paginationArrow.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.pagination .pagination-button.right {
+    transform: rotate(180deg);
+}
+.loader {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #7675f9;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+   }
+    100% {
+        transform: rotate(360deg);
+   }
 }
