@@ -3,13 +3,14 @@
     --color-text-primary: #666676;
     --color-button-primary: #61CDA6;
     --color-button-primary-hover: #47B08B;
+    --color-page: #F5F5F5;
     --transition-primary: 260ms ease-in-out;
-
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+    background-color: var(--color-page);
 }
 
 .wrapper {
@@ -20,7 +21,7 @@ body {
 
 h1.title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 24px;
     color: var(--color-text-primary);
     text-transform: uppercase;
 }
@@ -31,6 +32,8 @@ h1.title {
         background-color: #4B4AEF;
 
         .header-select {
+            position: relative;
+
             .header-select-head {
                 color: #FFFFFF;
                 width: 120px;
@@ -55,6 +58,45 @@ h1.title {
                     background-image: url(../images/selectArrow.svg);
                     background-position: center center;
                     background-repeat: no-repeat;
+                }
+            }
+            .header-select-dropdown {
+                position: absolute;                
+                z-index: 3;
+                transition: var(--transition-primary);
+                pointer-events: none;
+                opacity: 0;
+                top: 30px;
+                left: 0;
+                background-color: var(--color-white);
+                padding: 11px 20px;
+                border-radius: 5px;
+                box-shadow: 4px 5px 20px 0px rgba(74, 105, 165, 0.16);
+                max-width: 350px;
+
+                .header-select-dropdown__item {
+                    
+                    .text {
+                        width: 100%;
+                        color: var(--color-text-primary);
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .header-select-dropdown__button {
+                    color: var(--color-button-primary);
+                    text-transform: uppercase;
+                    border: none;
+                    background-color: transparent;
+                    font-weight: 700;
+                    text-align: left;
+                }
+            }
+            &.active {
+                .header-select-dropdown {
+                    opacity: 1;
+                    pointer-events: all;
                 }
             }
         }
@@ -109,11 +151,15 @@ h1.title {
             background-color: var(--color-white);
             padding: 20px 15px 30px;
             min-width: 150px;
+            height: calc(100vh - 70px);
             transition: var(--transition-primary);
             transform: translateX(100%);
+            box-shadow: 100vw 100vw 0 100vw var(--color-white);
 
             .burger-menu-list {
                 list-style: none;
+                padding-left:  0;
+
                 .burger-menu-list__item {
                     color: var(--color-text-primary);
                     font-weight: 600;
@@ -143,11 +189,48 @@ h1.title {
     flex: 1 0 auto;
 }
 
+.action-panel {
+    .action-link {
+        color: #A8A8BE;
+        text-decoration: none;
+        font-weight: 500;
+        width: fit-content;
+
+        path {
+            fill: #A8A8BE;
+        }
+        &.active {
+            color: #60CDA6;
+
+            path {
+                fill: #60CDA6;
+            }
+        }
+    }
+    .update {
+        background-color: #E5E5F8;
+        width: 25px;
+        height: 25px;
+        background-image: url(../images/updateIcon.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: none;
+        border-radius: 5px;
+    }
+}
+.search-button {
+    border: 1px solid #A8A8BE;
+    border-radius: 50px;
+    color: #A8A8BE;
+    background-color: transparent;
+    padding: 10px 20px;
+}
 .shops-table {
     color: var(--color-text-primary);
     border-radius: 10px;
     border-style: hidden;
     box-shadow: 0 0 0 1px #A8A8BE;
+    width: 100%;
 
     .shops-table-row {
 
@@ -157,11 +240,7 @@ h1.title {
             font-size: 12px;
             border: 1px solid #A8A8BE;
             padding: 10px 15px;
-            &.vertical {
-                writing-mode: vertical-rl;
-                text-orientation: mixed;
-                transform: rotate(180deg);
-            }
+            text-align: center;
         }
 
         .shops-table-cell {
@@ -169,6 +248,7 @@ h1.title {
             text-align: center;
             vertical-align: middle;
             padding: 10px 15px;
+            vertical-align: center;
 
             .name {
                 overflow: hidden;
@@ -181,20 +261,22 @@ h1.title {
             button.delete {
                 background-color: transparent;
                 border: none;
-                width: 14px;
-                height: 14px;
+                width: 16px;
+                height: 16px;
                 background-image: url(../images/deleteTableIcon.svg);
                 background-position: center center;
                 background-repeat: no-repeat;
+                margin: 2px;
             }
             button.edit {
                 background-color: transparent;
                 border: none;
-                width: 14px;
-                height: 14px;
+                width: 16px;
+                height: 16px;
                 background-image: url(../images/editTableIcon.svg);
                 background-position: center center;
                 background-repeat: no-repeat;
+                margin: 2px;
             }
         }
     }
@@ -207,6 +289,7 @@ h1.title {
     transition: var(--transition-primary);
     width: fit-content;
     border: none;
+    font-size: 14px;
     border-radius: 50px;
     line-height: 1.2;
     font-weight: 700;
@@ -226,14 +309,7 @@ h1.title {
         border: 1px solid var(--color-button-primary);
         color: var(--color-button-primary);
         background-color: var(--color-white);
-    }
-    &:hover {
-        background-color: var(--color-button-primary-hover);
-    }
-    &.border-button:hover {
-        border: 1px solid var(--color-button-primary-hover);
-        color: var(--color-white);
-        background-color: var(--color-button-primary-hover);
+        font-weight: 400;
     }
 }
 
@@ -283,3 +359,53 @@ h1.title {
     }
 } 
 
+/********Responsive**********/
+/* disable hover */
+@media (min-width: 991.98px) {
+    .primary-button {
+        &:hover {
+            background-color: var(--color-button-primary-hover);
+        }
+        &.border-button:hover {
+            border: 1px solid var(--color-button-primary-hover);
+            color: var(--color-white);
+            background-color: var(--color-button-primary-hover);
+        }
+    }
+}
+
+@media (max-width: 1399.98px) {
+
+}
+
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) {
+
+}
+
+@media (max-width: 767.98px) {
+    .shops-table {
+   
+        .shops-table-row {    
+    
+            .shops-table-head {
+    
+                &.vertical {
+                    writing-mode: vertical-rl;
+                    text-orientation: mixed;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    h1.title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+}

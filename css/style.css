@@ -3,11 +3,13 @@
     --color-text-primary: #666676;
     --color-button-primary: #61cda6;
     --color-button-primary-hover: #47b08b;
+    --color-page: #f5f5f5;
     --transition-primary: 260ms ease-in-out;
 }
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+    background-color: var(--color-page);
 }
 .wrapper {
     display: flex;
@@ -16,13 +18,16 @@ body {
 }
 h1.title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 24px;
     color: var(--color-text-primary);
     text-transform: uppercase;
 }
 .header .header-wrapper {
     padding: 14px 16px;
     background-color: #4b4aef;
+}
+.header .header-wrapper .header-select {
+    position: relative;
 }
 .header .header-wrapper .header-select .header-select-head {
     color: #fff;
@@ -48,6 +53,39 @@ h1.title {
     background-image: url(../images/selectArrow.svg);
     background-position: center center;
     background-repeat: no-repeat;
+}
+.header .header-wrapper .header-select .header-select-dropdown {
+    position: absolute;
+    z-index: 3;
+    transition: var(--transition-primary);
+    pointer-events: none;
+    opacity: 0;
+    top: 30px;
+    left: 0;
+    background-color: var(--color-white);
+    padding: 11px 20px;
+    border-radius: 5px;
+    box-shadow: 4px 5px 20px 0px rgba(74, 105, 165, 0.16);
+    max-width: 350px;
+}
+.header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__item .text {
+    width: 100%;
+    color: var(--color-text-primary);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__button {
+    color: var(--color-button-primary);
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    text-align: left;
+}
+.header .header-wrapper .header-select.active .header-select-dropdown {
+    opacity: 1;
+    pointer-events: all;
 }
 .header .header-wrapper .burger-button {
     height: 20px;
@@ -98,11 +136,14 @@ h1.title {
     background-color: var(--color-white);
     padding: 20px 15px 30px;
     min-width: 150px;
+    height: calc(100vh - 70px);
     transition: var(--transition-primary);
     transform: translateX(100%);
+    box-shadow: 100vw 100vw 0 100vw var(--color-white);
 }
 .header .header-wrapper .burger-menu .burger-menu-list {
     list-style: none;
+    padding-left: 0;
 }
 .header .header-wrapper .burger-menu .burger-menu-list .burger-menu-list__item {
     color: var(--color-text-primary);
@@ -124,28 +165,58 @@ h1.title {
 .main {
     flex: 1 0 auto;
 }
+.action-panel .action-link {
+    color: #a8a8be;
+    text-decoration: none;
+    font-weight: 500;
+    width: fit-content;
+}
+.action-panel .action-link path {
+    fill: #a8a8be;
+}
+.action-panel .action-link.active {
+    color: #60cda6;
+}
+.action-panel .action-link.active path {
+    fill: #60cda6;
+}
+.action-panel .update {
+    background-color: #e5e5f8;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/updateIcon.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 5px;
+}
+.search-button {
+    border: 1px solid #a8a8be;
+    border-radius: 50px;
+    color: #a8a8be;
+    background-color: transparent;
+    padding: 10px 20px;
+}
 .shops-table {
     color: var(--color-text-primary);
     border-radius: 10px;
     border-style: hidden;
     box-shadow: 0 0 0 1px #a8a8be;
+    width: 100%;
 }
 .shops-table .shops-table-row .shops-table-head {
     font-weight: 600;
     font-size: 12px;
     border: 1px solid #a8a8be;
     padding: 10px 15px;
-}
-.shops-table .shops-table-row .shops-table-head.vertical {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
+    text-align: center;
 }
 .shops-table .shops-table-row .shops-table-cell {
     border: 1px solid #a8a8be;
     text-align: center;
     vertical-align: middle;
     padding: 10px 15px;
+    vertical-align: center;
 }
 .shops-table .shops-table-row .shops-table-cell .name {
     overflow: hidden;
@@ -158,20 +229,22 @@ h1.title {
 .shops-table .shops-table-row .shops-table-cell button.delete {
     background-color: transparent;
     border: none;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     background-image: url(../images/deleteTableIcon.svg);
     background-position: center center;
     background-repeat: no-repeat;
+    margin: 2px;
 }
 .shops-table .shops-table-row .shops-table-cell button.edit {
     background-color: transparent;
     border: none;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     background-image: url(../images/editTableIcon.svg);
     background-position: center center;
     background-repeat: no-repeat;
+    margin: 2px;
 }
 .primary-button {
     padding: 10px 15px;
@@ -180,6 +253,7 @@ h1.title {
     transition: var(--transition-primary);
     width: fit-content;
     border: none;
+    font-size: 14px;
     border-radius: 50px;
     line-height: 1.2;
     font-weight: 700;
@@ -198,14 +272,7 @@ h1.title {
     border: 1px solid var(--color-button-primary);
     color: var(--color-button-primary);
     background-color: var(--color-white);
-}
-.primary-button:hover {
-    background-color: var(--color-button-primary-hover);
-}
-.primary-button.border-button:hover {
-    border: 1px solid var(--color-button-primary-hover);
-    color: var(--color-white);
-    background-color: var(--color-button-primary-hover);
+    font-weight: 400;
 }
 .footer {
     flex-shrink: 0;
@@ -244,5 +311,27 @@ h1.title {
    }
     100% {
         transform: rotate(360deg);
+   }
+}
+/********Responsive**********/
+/* disable hover */
+@media (min-width: 991.98px) {
+    .primary-button:hover {
+        background-color: var(--color-button-primary-hover);
+   }
+    .primary-button.border-button:hover {
+        border: 1px solid var(--color-button-primary-hover);
+        color: var(--color-white);
+        background-color: var(--color-button-primary-hover);
+   }
+}
+@media (max-width: 767.98px) {
+    .shops-table .shops-table-row .shops-table-head.vertical {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+   }
+    h1.title {
+        font-size: 18px;
    }
 }
