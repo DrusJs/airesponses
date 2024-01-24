@@ -74,6 +74,11 @@ h1.title {
     border: 1px solid #a8a8be;
     padding: 10px 15px;
 }
+.shops-table .shops-table-row .shops-table-head.vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
 .shops-table .shops-table-row .shops-table-cell {
     border: 1px solid #a8a8be;
     text-align: center;

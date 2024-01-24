@@ -90,6 +90,11 @@ h1.title {
             font-size: 12px;
             border: 1px solid #A8A8BE;
             padding: 10px 15px;
+            &.vertical {
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                transform: rotate(180deg);
+            }
         }
 
         .shops-table-cell {
