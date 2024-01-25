@@ -76,16 +76,18 @@
                     <table class="shops-table">
                         <tr class="shops-table-row">
                             <th class="shops-table-head">Наименование организации</th>
-                            <th class="shops-table-head vertical">Авторизовано</th>
-                            <th class="shops-table-head vertical">Активных товаров</th>
-                            <th class="shops-table-head vertical">Отзывы без ответа</th>
-                            <th class="shops-table-head vertical">Неотправленных отзывов</th>
-                            <th class="shops-table-head vertical">Действия</th>
+                            <th class="shops-table-head vertical"><div class="d-flex justify-content-center align-items-center w-100">Авторизовано</div></th>
+                            <th class="shops-table-head vertical"><div class="d-flex justify-content-center align-items-center w-100">Активных товаров</div></th>
+                            <th class="shops-table-head vertical"><div class="d-flex justify-content-center align-items-center w-100">Отзывы без ответа</div></th>
+                            <th class="shops-table-head vertical"><div class="d-flex justify-content-center align-items-center w-100">Неотправленных отзывов</div></th>
+                            <th class="shops-table-head vertical"><div class="d-flex justify-content-center align-items-center w-100 h-100">Действия</div></th>
                         </tr>
                         <tr class="shops-table-row">
                             <td class="shops-table-cell">
-                                <img src="images/wb.jpg" alt="WB">
-                                <span class="name">ИП Шишкова О.П.</span>
+                                <div class="d-flex align-items-center justify-content-center gap-2">
+                                    <img src="images/wb.jpg" alt="WB">
+                                    <span class="name">ИП Шишкова О.П.</span>
+                                </div>
                             </td>
                             <td class="shops-table-cell"><img src="images/check icon.svg" alt=""></td>
                             <td class="shops-table-cell">8</td>
@@ -98,8 +100,10 @@
                         </tr>
                         <tr class="shops-table-row">
                             <td class="shops-table-cell">
-                                <img src="images/ozon.svg" alt="OZON">
-                                <span class="name">OOO OZON</span>
+                                <div class="d-flex align-items-center justify-content-center gap-2">
+                                    <img src="images/ozon.svg" alt="OZON">
+                                    <span class="name">OOO OZON</span>
+                                </div>
                             </td>
                             <td class="shops-table-cell"><img src="images/check icon.svg" alt=""></td>
                             <td class="shops-table-cell">9</td>
@@ -112,13 +116,17 @@
                         </tr>
                         <tr class="shops-table-row">
                             <td class="shops-table-cell">
-                                <img src="images/wb.jpg" alt="WB">
-                                <span class="name">ООО Новая</span>
+                                <div class="d-flex align-items-center justify-content-center gap-2">
+                                    <img src="images/wb.jpg" alt="WB">
+                                    <span class="name">ООО Новая</span>
+                                </div>
                             </td>
                             <td class="shops-table-cell"><img src="images/check icon.svg" alt=""></td>
-                            <td class="shops-table-cell" colspan="3">
-                                <div class="loader"></div>
-                                Немного подождите, мы загружаем отзывы
+                            <td class="shops-table-cell text-start" colspan="3">
+                                <div class="d-flex align-items-center justify-content-center gap-2">
+                                    <div class="loader"></div>
+                                    Немного подождите, мы загружаем отзывы
+                                </div>
                             </td>
                             <td class="shops-table-cell">
                                 <button class="edit"></button>
@@ -127,8 +135,10 @@
                         </tr>
                         <tr class="shops-table-row">
                             <td class="shops-table-cell">
-                                <img src="images/ozon.svg" alt="OZON">
-                                <span class="name">Магазин OZON</span>
+                                <div class="d-flex align-items-center justify-content-center gap-2">
+                                    <img src="images/ozon.svg" alt="OZON">
+                                    <span class="name">Магазин OZON</span>
+                                </div>
                             </td>
                             <td class="shops-table-cell"><img src="images/uncheck icon.svg" alt=""></td>
                             <td class="shops-table-cell" colspan="3"><a href="">Для авторизации магазина Ozon напишите нам в чат поддержки  в Telegram  https://t.me/airesponses</a></td>
@@ -138,17 +148,26 @@
                             </td>
                         </tr>
                     </table>
-                    <div class="pagination d-flex align-items-center justify-content-center gap-2 mt-3">
-                        <div class="pagination-button left"></div>
-                        <div class="pagination__item active">1</div>
-                        <div class="pagination__item d-none">...</div>
-                        <div class="pagination__item">2</div>
-                        <div class="pagination__item">3</div>
-                        <div class="pagination__item">4</div>
-                        <div class="pagination__item">5</div>
-                        <div class="pagination__item">...</div>
-                        <div class="pagination__item">23</div>
-                        <div class="pagination-button right"></div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-between">
+                        <div class="d-none d-lg-flex align-items-center gap-2">
+                            <div class="text">Количество строк:</div>
+                            <span>10</span>
+                            <span>20</span>
+                            <span>50</span>
+                            <span>100</span>
+                        </div>
+                        <div class="pagination d-flex align-items-center justify-content-center gap-2 mt-3">
+                            <div class="pagination-button left"></div>
+                            <div class="pagination__item active">1</div>
+                            <div class="pagination__item d-none">...</div>
+                            <div class="pagination__item">2</div>
+                            <div class="pagination__item">3</div>
+                            <div class="pagination__item">4</div>
+                            <div class="pagination__item">5</div>
+                            <div class="pagination__item">...</div>
+                            <div class="pagination__item">23</div>
+                            <div class="pagination-button right"></div>
+                        </div>
                     </div>
                 </div>                
             </main>
