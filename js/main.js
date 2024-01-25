@@ -22,3 +22,18 @@ if (headerSelect.length) {
         })
     })
 }
+
+const productElementShow = document.querySelectorAll('.product-show')
+
+if (productElementShow.length) {
+    productElementShow.forEach(el=>{
+        el.addEventListener('click', function(event) {
+            let container = this.closest('.product-item')
+            let hideBlock = container.querySelector('.product-dropdown-info')
+            this.classList.toggle('active')
+            hideBlock.classList.toggle('active')            
+            
+            hideBlock.style.maxHeight = hideBlock.classList.contains('active')?hideBlock.scrollHeight+'px':'0px'
+        })
+    })
+}
