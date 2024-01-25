@@ -517,6 +517,12 @@ h1.title {
         text-align: center;
         // padding: 10px 70px;
     }
+    &.blue {
+        background-color: #4B4AEF;
+    }
+    &.shadow {
+        box-shadow: 0px 15px 40px 0px rgba(41, 43, 107, 0.3); 
+    }
     &.uppercase {
         text-transform: uppercase;
     }
@@ -525,6 +531,17 @@ h1.title {
         color: var(--color-button-primary);
         background-color: transparent;
         font-weight: 400;
+    }
+    &:active {
+        background-color: var(--color-button-primary-hover);
+    }
+    &.border-button:active {
+        border: 1px solid var(--color-button-primary-hover);
+        color: var(--color-white);
+        background-color: var(--color-button-primary-hover);
+    }
+    &.blue:active {
+        background-color: #3A3ABC;;
     }
 }
 
@@ -596,6 +613,9 @@ h1.title {
             border: 1px solid var(--color-button-primary-hover);
             color: var(--color-white);
             background-color: var(--color-button-primary-hover);
+        }
+        &.blue:hover {
+            background-color: #3A3ABC;;
         }
     }
 }

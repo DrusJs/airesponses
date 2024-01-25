@@ -457,6 +457,12 @@ h1.title {
     width: 100%;
     text-align: center;
 }
+.primary-button.blue {
+    background-color: #4b4aef;
+}
+.primary-button.shadow {
+    box-shadow: 0px 15px 40px 0px rgba(41, 43, 107, 0.3);
+}
 .primary-button.uppercase {
     text-transform: uppercase;
 }
@@ -465,6 +471,17 @@ h1.title {
     color: var(--color-button-primary);
     background-color: transparent;
     font-weight: 400;
+}
+.primary-button:active {
+    background-color: var(--color-button-primary-hover);
+}
+.primary-button.border-button:active {
+    border: 1px solid var(--color-button-primary-hover);
+    color: var(--color-white);
+    background-color: var(--color-button-primary-hover);
+}
+.primary-button.blue:active {
+    background-color: #3a3abc;
 }
 .footer {
     flex-shrink: 0;
@@ -520,6 +537,9 @@ h1.title {
         border: 1px solid var(--color-button-primary-hover);
         color: var(--color-white);
         background-color: var(--color-button-primary-hover);
+   }
+    .primary-button.blue:hover {
+        background-color: #3a3abc;
    }
 }
 @media (max-width: 767.98px) {
