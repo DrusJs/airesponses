@@ -249,18 +249,26 @@ h1.title {
         width: 80px;
         border-radius: 5px;
     }
+    .review-img {
+        width: 110px;
+        border-radius: 5px;
+        object-fit: contain;
+        height: fit-content;
+    }
     .product-title {
         font-size: 14px;
         font-weight: 700;
         color: var(--color-text-primary);
         text-transform: uppercase;
-        padding-right: 10px;
     }
     .product-info {
         font-size: 14px;
         font-weight: 400;
         margin-bottom: 10px;
         color: var(--color-text-primary);
+        &.small {
+            font-size: 12px;
+        }
     }
     .settings {
         width: 33px;
@@ -282,6 +290,22 @@ h1.title {
             transform: rotate(0deg);
         }
     }
+    .review-show {
+        background-image: url(../images/product-show.svg);
+        background-position: top 11px center;
+        background-repeat: no-repeat;
+        background-color: #E5E5F8;
+        border: none;
+        border-radius: 10px;
+        width: 30px;
+        height: 30px;
+        transform: rotate(0deg);
+        align-self: flex-end;
+
+        &.active {
+            transform: rotate(180deg);
+        }
+    }
     .product-settings {
         font-size: 16px;
         color: var(--color-button-primary);
@@ -294,6 +318,14 @@ h1.title {
         align-self: flex-end;
         text-align: right;
 
+        .text {
+            margin: 0;
+        }
+    }
+
+    .review-info {
+        font-size: 8px;
+        color: var(--color-text-primary);
         .text {
             margin: 0;
         }
@@ -333,6 +365,56 @@ h1.title {
                 font-weight: 400;
                 overflow-y: scroll;
                 overflow-x: hidden;
+            }
+        }
+
+        &.active {
+            opacity: 1;
+            max-height: fit-content;
+        }
+    }
+
+    .review-state {
+        padding: 6px 12px;
+        font-size: 12px;
+        border-radius: 5px;
+
+        &.error {
+            color: var(--color-white);
+            background-color: #FF6C6C;
+        }
+        &.await {
+            color: var(--color-text-primary);
+            background-color: #FFCF58;
+        }
+        &.accept {
+            color: var(--color-text-primary);
+            background-color: #95F5D3;
+        }
+    }
+
+    .review-dropdown-text {
+        opacity: 0;
+        overflow: hidden;
+
+        transition: var(--transition-primary);
+
+        .title {
+            color: var(--color-text-primary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .review-overflow {
+            padding: 14px 11px 14px 20px;
+            border-radius: 5px;
+            background-color: #E5E5F8;
+            min-height: 90px;
+            display: block;
+            overflow-y: scroll;
+
+            &.height {
+                min-height: 190px;
             }
         }
 

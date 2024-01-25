@@ -37,3 +37,18 @@ if (productElementShow.length) {
         })
     })
 }
+
+const reviewElementShow = document.querySelectorAll('.review-show')
+
+if (reviewElementShow.length) {
+    reviewElementShow.forEach(el=>{
+        el.addEventListener('click', function(event) {
+            let container = this.closest('.product-item')
+            let hideBlock = container.querySelector('.review-dropdown-text')
+            this.classList.toggle('active')
+            hideBlock.classList.toggle('active')            
+            
+            hideBlock.style.maxHeight = hideBlock.classList.contains('active')?hideBlock.scrollHeight+'px':'0px'
+        })
+    })
+}
