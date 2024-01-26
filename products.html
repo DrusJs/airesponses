@@ -20,8 +20,8 @@
         <div class="wrapper">
             <header class="header">
                 <div class="header-wrapper">
-                    <div class="container d-flex align-items-center justify-content-between">
-                        <div class="logo"><img src="images/logo.svg" alt="airesponses"></div>
+                    <div class="container d-flex align-items-center gap-2">
+                        <a href="/" class="logo"><img src="images/logo.svg" alt="airesponses"></a>
                         <div class="header-select">
                             <div class="header-select-head d-flex align-items-center gap-2">
                                 <img src="images/wb.jpg" alt="WB">
@@ -45,7 +45,16 @@
                                 <button class="header-select-dropdown__button">Все магазины</button>
                             </div>
                         </div>
-                        <div id="burger-button" class="burger-button d-flex flex-column justify-content-between">
+                        <div class="d-flex flex-grow-1"></div>
+                        <div class="d-md-flex d-none align-items-center justify-content-between gap-4">
+                            <a href="#" class="balance" style="background-color: #7675F9; border: none; text-transform: none; color: #fff; padding: 10px 20px; border-radius: 20px;">Балланс</a>
+                            <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.0516 16.8111V12.0294C21.0494 9.89885 20.2933 7.83781 18.9173 6.21129C17.5412 4.58476 15.6339 3.4977 13.5332 3.14261V1.50359C13.5332 1.10479 13.3747 0.722323 13.0927 0.440327C12.8107 0.158332 12.4283 -9.15527e-05 12.0295 -9.15527e-05C11.6307 -9.15527e-05 11.2482 0.158332 10.9662 0.440327C10.6842 0.722323 10.5258 1.10479 10.5258 1.50359V3.14261C8.42505 3.4977 6.51776 4.58476 5.14168 6.21129C3.7656 7.83781 3.00953 9.89885 3.00737 12.0294V16.8111C2.12989 17.1213 1.36985 17.6954 0.831445 18.4545C0.293036 19.2137 0.00261568 20.1208 0 21.0515V24.0589C0 24.4577 0.158424 24.8401 0.440419 25.1221C0.722415 25.4041 1.10488 25.5625 1.50368 25.5625H6.22525C6.57152 26.8367 7.32746 27.9615 8.37642 28.7635C9.42538 29.5654 10.7091 29.9999 12.0295 29.9999C13.3499 29.9999 14.6336 29.5654 15.6825 28.7635C16.7315 27.9615 17.4874 26.8367 17.8337 25.5625H22.5553C22.9541 25.5625 23.3365 25.4041 23.6185 25.1221C23.9005 24.8401 24.0589 24.4577 24.0589 24.0589V21.0515C24.0563 20.1208 23.7659 19.2137 23.2275 18.4545C22.6891 17.6954 21.9291 17.1213 21.0516 16.8111ZM6.01474 12.0294C6.01474 10.4342 6.64843 8.9043 7.77641 7.77632C8.90439 6.64834 10.4343 6.01464 12.0295 6.01464C13.6247 6.01464 15.1546 6.64834 16.2825 7.77632C17.4105 8.9043 18.0442 10.4342 18.0442 12.0294V16.5404H6.01474V12.0294ZM12.0295 27.0662C11.5046 27.0631 10.9898 26.9226 10.5361 26.6588C10.0823 26.395 9.70554 26.0171 9.44314 25.5625H14.6158C14.3534 26.0171 13.9766 26.395 13.5229 26.6588C13.0692 26.9226 12.5543 27.0631 12.0295 27.0662ZM21.0516 22.5552H3.00737V21.0515C3.00737 20.6527 3.16579 20.2702 3.44779 19.9882C3.72978 19.7062 4.11225 19.5478 4.51105 19.5478H19.5479C19.9467 19.5478 20.3292 19.7062 20.6112 19.9882C20.8932 20.2702 21.0516 20.6527 21.0516 21.0515V22.5552Z" fill="#FAFAFF"/>
+                            </svg>
+                            <a href="#"><img src="images/personal account icon.svg" alt=""></a>
+                            <button style="border: none; background-color: transparent;"><img src="images/log out icon.svg" alt=""></button>
+                        </div>
+                        <div id="burger-button" class="burger-button d-flex d-md-none flex-column justify-content-between">
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
@@ -70,7 +79,7 @@
             </header>
 
             <main class="main">
-                <div class="container">
+                <div class="container  main-container">
                     <a href="index.html"><button class="primary-button d-md-none uppercase mt-4 mb-2">К списку магазинов</button></a>
                     <div class="action-panel d-flex justify-content-between gap-2 mt-2 mb-2">
                         <a href="#" class="action-link d-flex align-items-center gap-2 active">
