@@ -79,103 +79,51 @@
             </header>
 
             <main class="main">
-                <div class="container main-container">
-                    <h1 class="title mt-4 mb-3">Все магазины</h1>
-                    <button class="primary-button border-button uppercase mb-4">Добавить магазин</button>
-                    <table class="shops-table">
-                        <tr class="shops-table-row">
-                            <th class="shops-table-head">Наименование организации</th>
-                            <th class="shops-table-head vertical"><div class="d-flex justify-content-center align-items-center w-100">Авторизовано</div></th>
-                            <th class="shops-table-head vertical"><div class="d-flex justify-content-center align-items-center w-100">Активных товаров</div></th>
-                            <th class="shops-table-head vertical"><div class="d-flex justify-content-center align-items-center w-100">Отзывы без ответа</div></th>
-                            <th class="shops-table-head vertical"><div class="d-flex justify-content-center align-items-center w-100">Неотправленных отзывов</div></th>
-                            <th class="shops-table-head vertical"><div class="d-flex justify-content-center align-items-center w-100 h-100">Действия</div></th>
-                        </tr>
-                        <tr class="shops-table-row">
-                            <td class="shops-table-cell">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="images/wb.jpg" alt="WB">
-                                    <span class="name">ИП Шишкова О.П.</span>
+                <div class="container  main-container">
+                    <div class="d-flex">
+                        <div class="d-flex flex-column gap-3 w-100">
+                            <h2 class="title mb-2">Выберите маркетплейс</h2>
+                            <div class="product-item">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="text">Включить рекомендации</div>
+                                    <input type="checkbox" name="" id="">
                                 </div>
-                            </td>
-                            <td class="shops-table-cell"><img class="icon-size" src="images/check icon.svg" alt=""></td>
-                            <td class="shops-table-cell">8</td>
-                            <td class="shops-table-cell">0</td>
-                            <td class="shops-table-cell">16</td>
-                            <td class="shops-table-cell">
-                                <button class="edit"></button>
-                                <button class="delete"></button>
-                            </td>
-                        </tr>
-                        <tr class="shops-table-row">
-                            <td class="shops-table-cell">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="images/ozon.svg" alt="OZON">
-                                    <span class="name">OOO OZON</span>
+                            </div>
+                            <h2 class="title">Добавление магазина</h2>
+                            <div class="product-item">
+                                <div class="d-flex align-items-center justify-content-between justify-content-md-end gap-4 mb-3">
+                                    <div class="security d-flex gap-2">
+                                        <img src="images/secure icon.svg" alt="">
+                                        <span class="text">Гарантия безопасности</span>
+                                    </div>
+                                    <div class="hint-primary">
+                                        <img src="images/hint icon 1.svg" alt="" class="hint-button">
+                                        <div class="hint-container d-none"></div>
+                                    </div>
                                 </div>
-                            </td>
-                            <td class="shops-table-cell"><img class="icon-size" src="images/check icon.svg" alt=""></td>
-                            <td class="shops-table-cell">9</td>
-                            <td class="shops-table-cell">0</td>
-                            <td class="shops-table-cell">42</td>
-                            <td class="shops-table-cell">
-                                <button class="edit"></button>
-                                <button class="delete"></button>
-                            </td>
-                        </tr>
-                        <tr class="shops-table-row">
-                            <td class="shops-table-cell">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="images/wb.jpg" alt="WB">
-                                    <span class="name">ООО Новая</span>
+                                <div class="input-wrapper d-flex flex-column gap-2 mb-3">
+                                    <span class="primary-input-label">Введите название магазина*</span>
+                                    <input type="text" class="primary-input" placeholder="Название магазина">
                                 </div>
-                            </td>
-                            <td class="shops-table-cell"><img class="icon-size" src="images/check icon.svg" alt=""></td>
-                            <td class="shops-table-cell text-start" colspan="3">
-                                <div class="d-flex align-items-center justify-content-center gap-2">
-                                    <div class="loader"></div>
-                                    Немного подождите, мы загружаем отзывы
+                                <div class="input-wrapper d-flex flex-column gap-2">
+                                    <span class="primary-input-label">Введите API ключ (контент + вопросы и отзывы)</span>
+                                    <input type="text" class="primary-input" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6Ik">
                                 </div>
-                            </td>
-                            <td class="shops-table-cell">
-                                <button class="edit"></button>
-                                <button class="delete"></button>
-                            </td>
-                        </tr>
-                        <tr class="shops-table-row">
-                            <td class="shops-table-cell">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="images/ozon.svg" alt="OZON">
-                                    <span class="name">Магазин OZON</span>
-                                </div>
-                            </td>
-                            <td class="shops-table-cell"><img class="icon-size" src="images/uncheck icon.svg" alt=""></td>
-                            <td class="shops-table-cell" colspan="3"><a href="">Для авторизации магазина Ozon напишите нам в чат поддержки  в Telegram  https://t.me/airesponses</a></td>
-                            <td class="shops-table-cell">
-                                <button class="edit"></button>
-                                <button class="delete"></button>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-between mt-4">
-                        <div class="d-none d-lg-flex align-items-center gap-3 pagi-count">
-                            <div class="text">Магазинов на странице:</div>
-                            <span class="active">10</span>
-                            <span>20</span>
-                            <span>50</span>
-                            <span>100</span>
-                        </div>
-                        <div class="pagination d-flex align-items-center justify-content-center gap-2 mt-3">
-                            <div class="pagination-button left"></div>
-                            <div class="pagination__item active">1</div>
-                            <div class="pagination__item d-none">...</div>
-                            <div class="pagination__item">2</div>
-                            <div class="pagination__item">3</div>
-                            <div class="pagination__item">4</div>
-                            <div class="pagination__item">5</div>
-                            <div class="pagination__item">...</div>
-                            <div class="pagination__item">23</div>
-                            <div class="pagination-button right"></div>
+                            </div>                            
+                            <button class="primary-button large uppercase blue shadow">сохранить</button>
+                            <div class="product-item">
+                                <h3 class="title">Как добавить организацию wildberries</h3>
+                                <ol class="number-count-list mt-4">
+                                    <li class="number-count-list__item">На портале WB Партнёры открываем <a href="" class="primary-link">Настройки</a></li>
+                                    <img src="images/wbInstruction.jpg" alt="">
+                                    <li class="number-count-list__item">Переходим на вкладку <a href="" class="primary-link">Доступ к API</a> нажимаем <a href="" class="primary-link">Создать новый токен</a></li>
+                                    <img src="images/wbInstruction2.jpg" alt="">
+                                    <li class="number-count-list__item">Вводим название токена, в тип токена указываем “Контент” и “Вопросы и отзывы”, далее нажимаем “Создать токен”</li>
+                                    <img src="images/wbInstruction3.jpg" alt="">
+                                    <li class="number-count-list__item">Копируем созданный токен и заполняем в форме слева</li>
+                                    <img src="images/wbInstruction4.jpg" alt="">
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>                
