@@ -360,6 +360,7 @@ h3.title {
 .product-item .product-dropdown-info.active {
     opacity: 1;
     max-height: fit-content;
+    margin: 20px 0;
 }
 .product-item .review-state {
     padding: 6px 12px;
@@ -413,9 +414,21 @@ h3.title {
 .search-button {
     border: 1px solid #a8a8be;
     border-radius: 50px;
+    font-size: 16px;
     color: #a8a8be;
     background-color: transparent;
-    padding: 10px 20px;
+    padding: 6px 30px;
+}
+.search-button input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 142px;
+    color: #a8a8be;
+}
+.search-button input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
 }
 .shops-table {
     color: var(--color-text-primary);
@@ -445,6 +458,7 @@ h3.title {
     transform: rotate(180deg);
     text-align: left;
     vertical-align: top;
+    padding: 10px 2px;
 }
 .shops-table .shops-table-row .shops-table-head.vertical div {
     max-height: 14ch;
@@ -464,9 +478,6 @@ h3.title {
 }
 .shops-table .shops-table-row .shops-table-cell:first-child div img {
     width: 20px;
-}
-.shops-table .shops-table-row .shops-table-cell .icon-size {
-    width: 24px;
 }
 .shops-table .shops-table-row .shops-table-cell .name {
     overflow: hidden;
@@ -529,11 +540,12 @@ h3.title {
 .primary-button {
     display: block;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 12px 18px;
     color: var(--color-white);
     background-color: var(--color-button-primary);
     transition: var(--transition-primary);
     width: fit-content;
+    white-space: nowrap;
     border: none;
     font-size: 14px;
     border-radius: 50px;
@@ -559,7 +571,7 @@ h3.title {
 .primary-button.border-button {
     border: 1px solid var(--color-button-primary);
     color: var(--color-button-primary);
-    background-color: transparent;
+    background-color: var(--color-white);
     font-weight: 400;
 }
 .primary-button:active {
@@ -620,6 +632,9 @@ h3.title {
 .input-wrapper {
     position: relative;
 }
+.input-wrapper.promo {
+    max-width: 450px;
+}
 .input-hint {
     position: absolute;
     bottom: 8px;
@@ -673,6 +688,9 @@ h3.title {
 .primary-input.small {
     font-size: 12px;
 }
+.primary-input.small + .input-hint {
+    bottom: 12px;
+}
 .select-inner .select-head {
     color: #a8a8be;
     cursor: pointer;
@@ -681,6 +699,20 @@ h3.title {
 .security {
     color: var(--color-button-primary);
     font-size: 18px;
+}
+.market-check {
+    border-radius: 5px;
+    border: 1px solid #bfbfd9;
+    background: #fafaff;
+    height: 64px;
+    width: 100%;
+    padding: 0 10px;
+    color: #666676;
+    font-size: 18px;
+    margin-right: 20px;
+}
+.market-check .hint-primary {
+    margin-left: auto;
 }
 .number-count-list {
     list-style: none;
@@ -697,6 +729,11 @@ h3.title {
 .number-count-list .number-count-list__item {
     counter-increment: item;
     margin-bottom: 5px;
+}
+.number-count-list .number-count-list__item .primary-link {
+    color: #4b4aef;
+    text-decoration: underline !important;
+    text-decoration-skip-ink: none;
 }
 .number-count-list .number-count-list__item::before {
     content: counter(item) ".";
@@ -862,8 +899,14 @@ h3.title {
    }
 }
 @media (min-width: 767.98px) {
-    body {
+    body, .p-text, .p-title {
         font-size: 18px;
+   }
+    body.size, .p-text.size, .p-title.size {
+        font-size: 18px;
+   }
+    .copy-icon {
+        width: 20px;
    }
     .company-info {
         font-size: 18px;
@@ -874,6 +917,12 @@ h3.title {
    }
     .calendar {
         color: #a8a8be;
+   }
+    .keyword {
+        font-size: 16px;
+        color: var(--color-text-primary);
+        padding: 12px 12px 12px 22px;
+        border-radius: 30px;
    }
     .number-count-list {
         font-size: 18px;
@@ -913,6 +962,9 @@ h3.title {
     .shops-table .shops-table-row .shops-table-cell {
         padding: 42px 20px;
    }
+    .shops-table .shops-table-row .shops-table-cell .icon-size {
+        width: 24px;
+   }
     .shops-table .shops-table-row .shops-table-cell button {
         width: 20px;
         height: 20px;
@@ -938,18 +990,15 @@ h3.title {
    }
     h1.title {
         font-size: 24px;
-        margin-bottom: 26px !important;
    }
     h2.title {
         font-size: 24px;
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
    }
     h3.title {
         font-size: 18px;
    }
     .header .header-wrapper .header-select .header-select-head {
-        width: 170px;
+        width: 180px;
    }
     .header .header-wrapper .header-select .header-select-head .header-select-head__text {
         width: 80%;
@@ -961,11 +1010,20 @@ h3.title {
     .product-item.padding {
         padding: 40px;
    }
+    .product-item .product-stat {
+        position: absolute;
+        right: 0;
+   }
+    .product-item .product-main {
+        padding-right: 200px;
+   }
     .product-item .product-title {
         font-size: 24px;
+        max-width: 550px;
    }
     .product-item .product-info {
         font-size: 18px;
+        margin-bottom: 0;
    }
     .product-item .product-info.small {
         font-size: 18px;
@@ -980,6 +1038,25 @@ h3.title {
     .product-item .review-info {
         font-size: 14px;
         gap: 10px;
+        position: absolute;
+        bottom: 0;
+   }
+    .product-item .review-show {
+        width: 40px;
+        height: 40px;
+        background-position: top 16px center;
+   }
+    .product-item .product-show {
+        width: 40px;
+        height: 40px;
+        background-position: top 15px center;
+   }
+    .product-item .settings {
+        width: 40px;
+        height: 40px;
+   }
+    .product-item .settings img {
+        width: 20px;
    }
     .product-item .product-dropdown-info .text {
         font-size: 16px;
@@ -998,6 +1075,12 @@ h3.title {
         padding: 16px 20px;
         font-size: 16px;
    }
+    .primary-input.small {
+        font-size: 16px;
+   }
+    .primary-input.small + .input-hint {
+        bottom: 16px;
+   }
     .primary-input::placeholder {
         font-size: 16px;
    }
@@ -1005,11 +1088,14 @@ h3.title {
         font-size: 16px;
    }
     .primary-button {
-        font-size: 16px;
+        font-size: 14px;
         padding: 15px 30px;
    }
     .primary-button.border-button {
         font-weight: 500;
+   }
+    .primary-button.blue.large {
+        padding: 20px 90px;
    }
     .main-container {
         margin-top: 60px;
@@ -1020,6 +1106,23 @@ h3.title {
    }
 }
 @media (min-width: 991.98px) {
+    .input-balance.bold {
+        background: #fff;
+        border-radius: 5px;
+        border: 1px solid #bfbfd9;
+        text-align: right;
+        color: #a8a8be;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 14px 20px;
+        width: 100%;
+   }
+    .new-store {
+        max-height: 1000px;
+   }
+    .product-item.fix {
+        max-width: 530px;
+   }
     .shops-table .shops-table-row .shops-table-head.vertical {
         writing-mode: horizontal-tb;
         transform: rotate(0deg);
