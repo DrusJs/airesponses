@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="images/icon.svg">
+
+        <title>airesponses.ru</title>
+
+        <!-- Шрифты -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Стили -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">        
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="auth-page d-flex flex-column flex-lg-row">
+                <div class="auth-info d-flex align-items-center justify-content-center">
+                    <div class="auth-info-inner d-flex flex-column align-items-center align-items-lg-start">
+                        <img class="logo" src="images/logo.svg" alt="airesponses">
+                        <h1>Добро пожаловать!</h1>
+                        <div class="auth-info-text">
+                            <p>Чтобы войти введите адрес вашей электронной почты и пароль</p>
+                            <p>Если вы забыли ваш пароль - не беда. Нажмите на "восстановить пароль", и мы вам поможем.</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="auth-form d-flex align-items-center justify-content-center">
+                    <div class="auth-form-inner d-flex flex-column align-items-center">
+                        <div class="auth-form-title">Авторизация</div>
+                        <div class="input-wrapper mb-4 w-100">
+                            <input type="email" class="primary-input" placeholder="Email">
+                        </div>
+                        <div class="input-wrapper mb-4 w-100">
+                            <input type="password" class="primary-input" placeholder="Пароль">
+                        </div>
+                        <button class="primary-button uppercase large mb-4">Войти</button>
+                        <div class="d-flex justify-content-between flex-column flex-md-row align-items-center gap-2 auth-links">
+                            <a class="auth-links__item" href="/register">Зарегистрироваться</a>
+                            <a class="auth-links__item" href="/reset-password">Восстановить пароль</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <script src="js/main.js" type="text/javascript"></script>
+    </body>
+</html>
