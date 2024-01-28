@@ -402,6 +402,7 @@ h3.title {
         &.active {
             opacity: 1;
             max-height: fit-content;
+            margin: 20px 0;
         }
     }
 
@@ -467,9 +468,23 @@ h3.title {
 .search-button {
     border: 1px solid #A8A8BE;
     border-radius: 50px;
+    font-size: 16px;
     color: #A8A8BE;
     background-color: transparent;
-    padding: 10px 20px;
+    padding: 6px 30px;
+
+    input {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        width: 142px;
+        color: #a8a8be;
+
+        &::placeholder {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
 }
 .shops-table {
     color: var(--color-text-primary);
@@ -502,6 +517,7 @@ h3.title {
                 transform: rotate(180deg);
                 text-align: left;
                 vertical-align: top;
+                padding: 10px 2px;
 
                 div {
                     max-height: 14ch;
@@ -529,9 +545,7 @@ h3.title {
                 }
             }
 
-            .icon-size {
-                width: 24px;
-            }
+
 
             .name {
                 overflow: hidden;
@@ -604,11 +618,12 @@ h3.title {
 .primary-button {
     display: block;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 12px 18px;
     color: var(--color-white);
     background-color: var(--color-button-primary);
     transition: var(--transition-primary);
     width: fit-content;
+    white-space: nowrap;
     border: none;
     font-size: 14px;
     border-radius: 50px;
@@ -626,6 +641,7 @@ h3.title {
     &.blue {
         background-color: #4B4AEF;
     }
+
     &.shadow {
         box-shadow: 0px 15px 40px 0px rgba(41, 43, 107, 0.3); 
     }
@@ -635,7 +651,7 @@ h3.title {
     &.border-button {
         border: 1px solid var(--color-button-primary);
         color: var(--color-button-primary);
-        background-color: transparent;
+        background-color: var(--color-white);
         font-weight: 400;
     }
     &:active {
@@ -706,6 +722,9 @@ h3.title {
 .input-wrapper {
     position: relative;
 }
+.input-wrapper.promo {
+    max-width: 450px;
+}
 .input-hint {
     position: absolute;
     bottom: 8px;
@@ -762,6 +781,9 @@ h3.title {
     &.small {
         font-size: 12px;
     }
+    &.small+.input-hint {
+        bottom: 12px;
+    }
 }
 
 
@@ -782,6 +804,22 @@ h3.title {
     font-size: 18px;
 }
 
+.market-check {
+    border-radius: 5px;
+    border: 1px solid #BFBFD9;
+    background: #fafaff;
+    height: 64px;
+    width: 100%;
+    padding: 0 10px;
+    color: #666676;
+    font-size: 18px;
+    margin-right: 20px;
+
+    .hint-primary {
+        margin-left: auto;
+    }
+}
+
 .number-count-list {
     list-style: none;
     counter-reset: item;
@@ -799,6 +837,12 @@ h3.title {
         counter-increment: item;
         margin-bottom: 5px;
 
+        .primary-link {
+            color: #4b4aef;
+            text-decoration: underline !important;
+            text-decoration-skip-ink: none;
+        }
+         
         &::before {
             content: counter(item) ".";
             color: var(--color-text-primary);
@@ -1002,8 +1046,14 @@ h3.title {
 }
 
 @media (min-width: 767.98px) {
-    body {
+    body, .p-text, .p-title {
         font-size: 18px;
+        &.size {
+            font-size: 18px;
+        }
+    }
+    .copy-icon {
+        width: 20px;
     }
     .company-info {
         font-size: 18px;
@@ -1014,6 +1064,13 @@ h3.title {
     }
     .calendar {
         color: #A8A8BE;
+    } 
+
+    .keyword {
+        font-size: 16px;
+        color: var(--color-text-primary);
+        padding: 12px 12px 12px 22px;
+        border-radius: 30px;
     }
 
     .number-count-list {
@@ -1068,6 +1125,10 @@ h3.title {
             .shops-table-cell {
                 padding: 42px 20px;
 
+                .icon-size {
+                    width: 24px;
+                }
+
                 button {
                     width: 20px;
                     height: 20px;
@@ -1098,12 +1159,9 @@ h3.title {
     }
     h1.title {
         font-size: 24px;
-        margin-bottom: 26px !important;
     }
     h2.title {
         font-size: 24px;
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
     }
     h3.title {
         font-size: 18px;
@@ -1112,7 +1170,7 @@ h3.title {
         .header-wrapper {
           .header-select {
             .header-select-head {
-              width: 170px;
+              width: 180px;
               .header-select-head__text {
                 width: 80%;
               }
@@ -1124,15 +1182,25 @@ h3.title {
         padding: 40px;
         border-radius: 20px;
 
-
         &.padding {
             padding: 40px;
         }
+
+        .product-stat {
+            position: absolute;
+            right: 0;
+        }
+        .product-main {
+            padding-right: 200px;
+        }
+
         .product-title {
             font-size: 24px;
+            max-width: 550px;
         }
         .product-info {
             font-size: 18px;
+            margin-bottom: 0;
 
             &.small {
                 font-size: 18px;
@@ -1150,7 +1218,26 @@ h3.title {
         .review-info {
             font-size: 14px;
             gap: 10px;
+            position: absolute;
+            bottom: 0;
         }
+        .review-show {
+            width: 40px;
+            height: 40px;
+            background-position: top 16px center;
+        }
+        .product-show {
+            width: 40px;
+            height: 40px;
+            background-position: top 15px center;
+        }
+        .settings {
+            width: 40px;
+            height: 40px;
+            img {
+                width: 20px;
+            }
+          }
     
         .product-dropdown-info {
     
@@ -1176,6 +1263,12 @@ h3.title {
         border-radius: 5px;
         padding: 16px 20px;
         font-size: 16px;
+        &.small {
+            font-size: 16px;
+        }
+        &.small+.input-hint {
+            bottom: 16px;
+        }
     }
     .primary-input::placeholder {
       font-size: 16px;
@@ -1190,10 +1283,13 @@ h3.title {
         }
     }
     .primary-button {
-        font-size: 16px;        
+        font-size: 14px;        
         padding: 15px 30px;
         &.border-button {
             font-weight: 500;
+        }
+        &.blue.large {
+            padding: 20px 90px;
         }
     }
     .main-container {
@@ -1210,6 +1306,31 @@ h3.title {
 
 
 @media (min-width: 991.98px) {
+    .input-balance {
+
+        
+        &.bold {
+            background: #fff;
+            border-radius: 5px;
+            border: 1px solid #BFBFD9;
+            text-align: right;
+            color: #a8a8be;
+            font-size: 24px;
+            font-weight: 600;
+            padding: 14px 20px;
+            width: 100%;
+        }
+    }
+    .new-store {
+        max-height: 1000px;
+    }
+
+    .product-item {
+        &.fix {
+            max-width: 530px;
+        }
+    }
+
     .shops-table {
         .shops-table-row {
           .shops-table-head {

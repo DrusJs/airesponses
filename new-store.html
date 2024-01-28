@@ -80,38 +80,61 @@
 
             <main class="main">
                 <div class="container  main-container">
+                    <h2 class="title mb-4">Выберите маркетплейс</h2>
                     <div class="d-flex">
-                        <div class="d-flex flex-column gap-3 w-100">
-                            <h2 class="title mb-2">Выберите маркетплейс</h2>
-                            <div class="product-item">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="text">Включить рекомендации</div>
-                                    <input type="checkbox" name="" id="">
+                        
+                        <div class="d-flex flex-column flex-lg-row gap-3 gap-lg-4 w-100">
+                            <div class="d-flex flex-column gap-md-4 gap-3 w-100">
+                                <div class="product-item d-flex flex-xl-row gap-3 flex-column w-100">
+                                    <div class="market-check d-flex align-items-center gap-3">
+                                        <input type="checkbox" name="" id="">
+                                        <div class="text">Wildberries</div>
+                                        <div class="hint-primary">
+                                            <img src="images/hint icon 1.svg" alt="" class="hint-button">
+                                            <div class="hint-container d-none"></div>
+                                        </div>
+                                    </div>
+                                    <div class="market-check d-flex align-items-center gap-3">
+                                        <input type="checkbox" name="" id="">
+                                        <div class="text">Ozon</div>
+                                        <div class="hint-primary">
+                                            <img src="images/hint icon 1.svg" alt="" class="hint-button">
+                                            <div class="hint-container d-none"></div>
+                                        </div>
+                                    </div>
+                                    <div class="market-check d-flex align-items-center gap-3">
+                                        <input type="checkbox" name="" id="">
+                                        <div class="text">Яндекс.Маркет</div>
+                                        <div class="hint-primary">
+                                            <img src="images/hint icon 1.svg" alt="" class="hint-button">
+                                            <div class="hint-container d-none"></div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <h2 class="title">Добавление магазина</h2>
+                                <div class="product-item w-100">
+                                    <div class="d-flex align-items-center justify-content-between justify-content-md-end gap-2 mb-3 mb-md-4">
+                                        <div class="security d-flex gap-2">
+                                            <img src="images/secure icon.svg" alt="">
+                                            <span class="text">Гарантия безопасности</span>
+                                        </div>
+                                        <div class="hint-primary">
+                                            <img src="images/hint icon 1.svg" alt="" class="hint-button">
+                                            <div class="hint-container d-none"></div>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper d-flex flex-column gap-2 mb-3 mb-md-4">
+                                        <span class="primary-input-label">Введите название магазина*</span>
+                                        <input type="text" class="primary-input" placeholder="Название магазина">
+                                    </div>
+                                    <div class="input-wrapper d-flex flex-column gap-2">
+                                        <span class="primary-input-label">Введите API ключ (контент + вопросы и отзывы)</span>
+                                        <input type="text" class="primary-input" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6Ik">
+                                    </div>
+                                </div>                            
+                                <button class="primary-button large uppercase blue shadow mt-4 py-md-4">сохранить</button>
                             </div>
-                            <h2 class="title">Добавление магазина</h2>
-                            <div class="product-item">
-                                <div class="d-flex align-items-center justify-content-between justify-content-md-end gap-4 mb-3">
-                                    <div class="security d-flex gap-2">
-                                        <img src="images/secure icon.svg" alt="">
-                                        <span class="text">Гарантия безопасности</span>
-                                    </div>
-                                    <div class="hint-primary">
-                                        <img src="images/hint icon 1.svg" alt="" class="hint-button">
-                                        <div class="hint-container d-none"></div>
-                                    </div>
-                                </div>
-                                <div class="input-wrapper d-flex flex-column gap-2 mb-3">
-                                    <span class="primary-input-label">Введите название магазина*</span>
-                                    <input type="text" class="primary-input" placeholder="Название магазина">
-                                </div>
-                                <div class="input-wrapper d-flex flex-column gap-2">
-                                    <span class="primary-input-label">Введите API ключ (контент + вопросы и отзывы)</span>
-                                    <input type="text" class="primary-input" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6Ik">
-                                </div>
-                            </div>                            
-                            <button class="primary-button large uppercase blue shadow">сохранить</button>
-                            <div class="product-item">
+                            <div class="product-item fix mt-3 mt-lg-0">
                                 <h3 class="title">Как добавить организацию wildberries</h3>
                                 <ol class="number-count-list mt-4">
                                     <li class="number-count-list__item">На портале WB Партнёры открываем <a href="" class="primary-link">Настройки</a></li>
