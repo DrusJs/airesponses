@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="images/icon.svg">
+
+        <title>airesponses.ru</title>
+
+        <!-- Шрифты -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Стили -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">        
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header-wrapper">
+                    <div class="container d-flex align-items-center gap-2">
+                        <a href="/" class="logo"><img src="images/logo.svg" alt="airesponses"></a>
+                        <div class="header-select">
+                            <div class="header-select-head d-flex align-items-center gap-2">
+                                <img src="images/wb.jpg" alt="WB">
+                                <div class="header-select-head__text">ИП Шишкова О.П.</div>
+                            </div>
+                            <div class="header-select-dropdown d-flex flex-column gap-2">
+                                <div class="header-select-dropdown__item d-flex align-items-center gap-3">
+                                    <img src="images/ozon.svg" alt="">
+                                    <div class="text">ozon.ruozon.ru ozon.ru ozon.ru ozon.ru</div>
+                                </div>
+                                <div class="header-select-dropdown__item d-flex align-items-center gap-3">
+                                    <img src="images/WB.jpg" alt="">
+                                    <div class="text">WB ИП Шишкова О.П.</div>
+                                </div>
+                                <button class="header-select-dropdown__button d-flex align-items-center gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.6 8.8H7.2V10.4C7.2 10.6122 7.28429 10.8157 7.43431 10.9657C7.58434 11.1157 7.78783 11.2 8 11.2C8.21217 11.2 8.41566 11.1157 8.56569 10.9657C8.71571 10.8157 8.8 10.6122 8.8 10.4V8.8H10.4C10.6122 8.8 10.8157 8.71571 10.9657 8.56569C11.1157 8.41566 11.2 8.21217 11.2 8C11.2 7.78783 11.1157 7.58434 10.9657 7.43431C10.8157 7.28429 10.6122 7.2 10.4 7.2H8.8V5.6C8.8 5.38783 8.71571 5.18434 8.56569 5.03431C8.41566 4.88429 8.21217 4.8 8 4.8C7.78783 4.8 7.58434 4.88429 7.43431 5.03431C7.28429 5.18434 7.2 5.38783 7.2 5.6V7.2H5.6C5.38783 7.2 5.18434 7.28429 5.03431 7.43431C4.88429 7.58434 4.8 7.78783 4.8 8C4.8 8.21217 4.88429 8.41566 5.03431 8.56569C5.18434 8.71571 5.38783 8.8 5.6 8.8ZM15.2 0H0.8C0.587827 0 0.384344 0.0842854 0.234315 0.234315C0.0842854 0.384344 0 0.587827 0 0.8V15.2C0 15.4122 0.0842854 15.6157 0.234315 15.7657C0.384344 15.9157 0.587827 16 0.8 16H15.2C15.4122 16 15.6157 15.9157 15.7657 15.7657C15.9157 15.6157 16 15.4122 16 15.2V0.8C16 0.587827 15.9157 0.384344 15.7657 0.234315C15.6157 0.0842854 15.4122 0 15.2 0ZM14.4 14.4H1.6V1.6H14.4V14.4Z" fill="#61CDA6"/>
+                                    </svg>                                        
+                                    Добавить магазин
+                                </button>
+                                <button class="header-select-dropdown__button">Все магазины</button>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-grow-1"></div>
+                        <div class="d-md-flex d-none align-items-center justify-content-between gap-4">
+                            <a href="#" class="balance" style="background-color: #7675F9; border: none; text-transform: none; color: #fff; padding: 10px 20px; border-radius: 20px;">Балланс</a>
+                            <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.0516 16.8111V12.0294C21.0494 9.89885 20.2933 7.83781 18.9173 6.21129C17.5412 4.58476 15.6339 3.4977 13.5332 3.14261V1.50359C13.5332 1.10479 13.3747 0.722323 13.0927 0.440327C12.8107 0.158332 12.4283 -9.15527e-05 12.0295 -9.15527e-05C11.6307 -9.15527e-05 11.2482 0.158332 10.9662 0.440327C10.6842 0.722323 10.5258 1.10479 10.5258 1.50359V3.14261C8.42505 3.4977 6.51776 4.58476 5.14168 6.21129C3.7656 7.83781 3.00953 9.89885 3.00737 12.0294V16.8111C2.12989 17.1213 1.36985 17.6954 0.831445 18.4545C0.293036 19.2137 0.00261568 20.1208 0 21.0515V24.0589C0 24.4577 0.158424 24.8401 0.440419 25.1221C0.722415 25.4041 1.10488 25.5625 1.50368 25.5625H6.22525C6.57152 26.8367 7.32746 27.9615 8.37642 28.7635C9.42538 29.5654 10.7091 29.9999 12.0295 29.9999C13.3499 29.9999 14.6336 29.5654 15.6825 28.7635C16.7315 27.9615 17.4874 26.8367 17.8337 25.5625H22.5553C22.9541 25.5625 23.3365 25.4041 23.6185 25.1221C23.9005 24.8401 24.0589 24.4577 24.0589 24.0589V21.0515C24.0563 20.1208 23.7659 19.2137 23.2275 18.4545C22.6891 17.6954 21.9291 17.1213 21.0516 16.8111ZM6.01474 12.0294C6.01474 10.4342 6.64843 8.9043 7.77641 7.77632C8.90439 6.64834 10.4343 6.01464 12.0295 6.01464C13.6247 6.01464 15.1546 6.64834 16.2825 7.77632C17.4105 8.9043 18.0442 10.4342 18.0442 12.0294V16.5404H6.01474V12.0294ZM12.0295 27.0662C11.5046 27.0631 10.9898 26.9226 10.5361 26.6588C10.0823 26.395 9.70554 26.0171 9.44314 25.5625H14.6158C14.3534 26.0171 13.9766 26.395 13.5229 26.6588C13.0692 26.9226 12.5543 27.0631 12.0295 27.0662ZM21.0516 22.5552H3.00737V21.0515C3.00737 20.6527 3.16579 20.2702 3.44779 19.9882C3.72978 19.7062 4.11225 19.5478 4.51105 19.5478H19.5479C19.9467 19.5478 20.3292 19.7062 20.6112 19.9882C20.8932 20.2702 21.0516 20.6527 21.0516 21.0515V22.5552Z" fill="#FAFAFF"/>
+                            </svg>
+                            <a href="#"><img src="images/personal account icon.svg" alt=""></a>
+                            <button style="border: none; background-color: transparent;"><img src="images/log out icon.svg" alt=""></button>
+                        </div>
+                        <div id="burger-button" class="burger-button d-flex d-md-none flex-column justify-content-between">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="burger-blur">
+                            <div class="container d-flex justify-content-end">
+                                <div id="burger-menu" class="burger-menu d-flex flex-column justify-content-between">
+                                    <nav>
+                                        <ul class="burger-menu-list d-flex flex-column">
+                                            <li class="burger-menu-list__item active"><a href="#">Личный кабинет</a></li>
+                                            <li class="burger-menu-list__item"><a href="#">Баланс</a></li>
+                                            <li class="burger-menu-list__item"><a href="#">Уведомления</a></li>
+                                            <li class="burger-menu-list__item"><a href="#">Настройки магазина</a></li>
+                                        </ul>
+                                    </nav>
+                                    <a href="#" class="logout-button">Выйти</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </header>
+
+            <main class="main">
+                <div class="container main-container">
+                    <h1 class="title mt-4 mb-3">Выбрать тариф</h1>
+                    <div class="tariff-flex d-flex flex-wrap flex-xl-nowrap">
+                        <div class="tariff-flex-col no-space d-none d-xl-flex flex-column">
+                            <div class="tariff-flex-col__item"></div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-center">аналитика</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-center">количество отзывов</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-center">срок тарифа</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-center">стоимость</div>
+                            <div class="tariff-flex-col__item"></div>
+                        </div>
+                        <div class="tariff-flex-col d-flex flex-column">
+                            <div class="tariff-flex-col__item head d-flex align-items-center justify-content-center">welcome</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">аналитика</span><img class="check-icon" src="images/uncheck icon.svg" alt=""></div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">количество отзывов</span>100</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">срок тарифа</span>14</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">стоимость</span>0 ₽</div>
+                            <div class="tariff-flex-col__item action d-flex align-items-center justify-content-center"><button class="primary-button uppercase">Подключить</button></div>
+                        </div>
+                        <div class="tariff-flex-col d-flex flex-column">
+                            <div class="tariff-flex-col__item head d-flex align-items-center justify-content-center">старт</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">аналитика</span><img class="check-icon" src="images/check icon.svg" alt=""></div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">количество отзывов</span>100</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">срок тарифа</span>30</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">стоимость</span>500 ₽</div>
+                            <div class="tariff-flex-col__item action d-flex align-items-center justify-content-center"><button class="primary-button uppercase">Купить</button></div>
+                        </div>
+                        <div class="tariff-flex-col d-flex flex-column">
+                            <div class="tariff-flex-col__item head d-flex align-items-center justify-content-center">оптима</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">аналитика</span><img class="check-icon" src="images/check icon.svg" alt=""></div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">количество отзывов</span>300</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">срок тарифа</span>30</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">стоимость</span>990 ₽</div>
+                            <div class="tariff-flex-col__item action d-flex align-items-center justify-content-center"><button class="primary-button uppercase">Купить</button></div>
+                        </div>
+                        <div class="tariff-flex-col d-flex flex-column">
+                            <div class="tariff-flex-col__item head d-flex align-items-center justify-content-center">Оптима +</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">аналитика</span><img class="check-icon" src="images/check icon.svg" alt=""></div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">количество отзывов</span>1 000</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">срок тарифа</span>30</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">стоимость</span>1 990 ₽</div>
+                            <div class="tariff-flex-col__item action d-flex align-items-center justify-content-center"><button class="primary-button uppercase">Купить</button></div>
+                        </div>
+                        <div class="tariff-flex-col d-flex flex-column">
+                            <div class="tariff-flex-col__item head d-flex align-items-center justify-content-center">Профи</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">аналитика</span><img class="check-icon" src="images/check icon.svg" alt=""></div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">количество отзывов</span>5 000</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">срок тарифа</span>30</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">стоимость</span>7 900 ₽</div>
+                            <div class="tariff-flex-col__item action d-flex align-items-center justify-content-center"><button class="primary-button uppercase">Купить</button></div>
+                        </div>
+                        <div class="tariff-flex-col d-flex flex-column">
+                            <div class="tariff-flex-col__item head d-flex align-items-center justify-content-center">Профи +</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">аналитика</span><img class="check-icon" src="images/check icon.svg" alt=""></div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">количество отзывов</span>10 000</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">срок тарифа</span>30</div>
+                            <div class="tariff-flex-col__item d-flex align-items-center justify-content-between justify-content-xl-center"><span class="mobile-name d-block d-xl-none">стоимость</span>8 900 ₽</div>
+                            <div class="tariff-flex-col__item action d-flex align-items-center justify-content-center"><button class="primary-button uppercase">Купить</button></div>
+                        </div>
+                    </div>  
+                    
+                </div>                 
+            </main>
+            
+            <footer class="footer">
+
+            </footer>
+        </div>
+    <script src="js/main.js" type="text/javascript"></script>
+    </body>
+</html>
