@@ -42,6 +42,9 @@ h3.title {
     color: var(--color-text-primary);
     text-transform: uppercase;
 }
+.header {
+    background-color: #4b4aef;
+}
 .header .header-wrapper {
     padding: 14px 0px;
     background-color: #4b4aef;
@@ -84,10 +87,16 @@ h3.title {
     top: 30px;
     left: 0;
     background-color: var(--color-white);
-    padding: 11px 10px;
+    padding: 20px 0;
     border-radius: 5px;
     box-shadow: 4px 5px 20px 0px rgba(74, 105, 165, 0.16);
     max-width: 180px;
+    border: 1px solid #000;
+}
+.header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__item {
+    padding: 4px 16px;
+    transition: var(--transition-primary);
+    cursor: pointer;
 }
 .header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__item .text {
     width: 100%;
@@ -95,6 +104,9 @@ h3.title {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+.header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__item:hover {
+    background-color: #e5e5f8;
 }
 .header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__button {
     color: var(--color-button-primary);
@@ -105,6 +117,7 @@ h3.title {
     text-align: left;
     padding: 0;
     white-space: nowrap;
+    font-size: 12px;
 }
 .header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__button svg {
     min-width: 16px;
@@ -434,7 +447,7 @@ h3.title {
     color: var(--color-text-primary);
     border-radius: 10px;
     border-style: hidden;
-    box-shadow: 0 0 0 1px #a8a8be;
+    box-shadow: 0 0 0 1px #bfbfd9;
     background-color: var(--color-white);
     width: 100%;
     overflow: hidden;
@@ -448,8 +461,8 @@ h3.title {
 .shops-table .shops-table-row .shops-table-head {
     font-weight: 600;
     font-size: 12px;
-    border: 1px solid #a8a8be;
-    padding: 10px 12px;
+    border: 1px solid #bfbfd9;
+    padding: 12px 8px;
     vertical-align: bottom;
 }
 .shops-table .shops-table-row .shops-table-head.vertical {
@@ -458,13 +471,13 @@ h3.title {
     transform: rotate(180deg);
     text-align: left;
     vertical-align: top;
-    padding: 10px 2px;
+    padding: 12px 6px;
 }
 .shops-table .shops-table-row .shops-table-head.vertical div {
     max-height: 14ch;
 }
 .shops-table .shops-table-row .shops-table-cell {
-    border: 1px solid #a8a8be;
+    border: 1px solid #bfbfd9;
     text-align: center;
     vertical-align: middle;
     padding: 10px 10px;
@@ -480,11 +493,8 @@ h3.title {
     width: 20px;
 }
 .shops-table .shops-table-row .shops-table-cell .name {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     display: inline-block;
-    max-width: 86%;
+    max-width: 80%;
     text-align: left;
 }
 .shops-table .shops-table-row .shops-table-cell button {
@@ -948,6 +958,9 @@ h3.title {
     .header .header-wrapper .header-select .header-select-dropdown {
         top: 46px;
    }
+    .header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__button {
+        font-size: 14px;
+   }
     .header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__button svg {
         width: 22px;
         height: 20px;
@@ -1089,10 +1102,10 @@ h3.title {
    }
     .primary-button {
         font-size: 14px;
-        padding: 15px 30px;
+        padding: 16px 36px;
    }
     .primary-button.border-button {
-        font-weight: 500;
+        font-weight: 700;
    }
     .primary-button.blue.large {
         padding: 20px 90px;
@@ -1128,6 +1141,7 @@ h3.title {
         transform: rotate(0deg);
         text-align: left;
         vertical-align: middle;
+        padding: 30px 18px;
    }
     .tariff-flex .tariff-flex-col {
         width: calc(33.333% - 20px);
@@ -1260,6 +1274,11 @@ h3.title {
     .tariff-flex .tariff-flex-col .tariff-flex-col__item .check-icon {
         width: 24px;
         height: 24px;
+   }
+}
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1420px;
    }
 }
 /* disable hover */

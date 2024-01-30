@@ -47,6 +47,8 @@ h3.title {
 }
 
 .header {
+    background-color: #4B4AEF;
+    
     .header-wrapper {
         padding: 14px 0px;
         background-color: #4B4AEF;
@@ -90,12 +92,16 @@ h3.title {
                 top: 30px;
                 left: 0;
                 background-color: var(--color-white);
-                padding: 11px 10px;
+                padding: 20px 0;
                 border-radius: 5px;
                 box-shadow: 4px 5px 20px 0px rgba(74, 105, 165, 0.16);
                 max-width: 180px;
+                border: 1px solid rgb(0, 0, 0, .175);
 
                 .header-select-dropdown__item {
+                    padding: 4px 16px;
+                    transition: var(--transition-primary);
+                    cursor: pointer;
                     
                     .text {
                         width: 100%;
@@ -103,6 +109,9 @@ h3.title {
                         overflow: hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
+                    }
+                    &:hover {
+                        background-color: #e5e5f8;
                     }
                 }
                 .header-select-dropdown__button {
@@ -114,6 +123,7 @@ h3.title {
                     text-align: left;
                     padding: 0;
                     white-space: nowrap;
+                    font-size: 12px;
 
                     svg {
                         min-width: 16px;
@@ -490,7 +500,7 @@ h3.title {
     color: var(--color-text-primary);
     border-radius: 10px;
     border-style: hidden;
-    box-shadow: 0 0 0 1px #A8A8BE;
+    box-shadow: 0 0 0 1px #BFBFD9;
     background-color: var(--color-white);
     width: 100%;
     overflow: hidden;
@@ -507,8 +517,8 @@ h3.title {
         .shops-table-head {
             font-weight: 600;
             font-size: 12px;
-            border: 1px solid #A8A8BE;
-            padding: 10px 12px;
+            border: 1px solid #BFBFD9;
+            padding: 12px 8px;
             vertical-align: bottom;
 
             &.vertical {
@@ -517,7 +527,7 @@ h3.title {
                 transform: rotate(180deg);
                 text-align: left;
                 vertical-align: top;
-                padding: 10px 2px;
+                padding: 12px 6px;
 
                 div {
                     max-height: 14ch;
@@ -527,7 +537,7 @@ h3.title {
 
 
         .shops-table-cell {
-            border: 1px solid #A8A8BE;
+            border: 1px solid #BFBFD9;
             text-align: center;
             vertical-align: middle;
             padding: 10px 10px;
@@ -545,14 +555,12 @@ h3.title {
                 }
             }
 
-
-
             .name {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                // overflow: hidden;
+                // white-space: nowrap;
+                // text-overflow: ellipsis;
                 display: inline-block;
-                max-width: 86%;
+                max-width: 80%;
                 text-align: left;
             }
             button {
@@ -1102,6 +1110,8 @@ h3.title {
                 top: 46px;
 
               .header-select-dropdown__button {
+                font-size: 14px;
+
                 svg {
                     width: 22px;
                     height: 20px;
@@ -1284,9 +1294,9 @@ h3.title {
     }
     .primary-button {
         font-size: 14px;        
-        padding: 15px 30px;
+        padding: 16px 36px;
         &.border-button {
-            font-weight: 500;
+            font-weight: 700;
         }
         &.blue.large {
             padding: 20px 90px;
@@ -1339,6 +1349,7 @@ h3.title {
                 transform: rotate(0deg);
                 text-align: left;
                 vertical-align: middle;
+                padding: 30px 18px;
             }
           }
         }
@@ -1511,9 +1522,14 @@ h3.title {
     }
 }
 
-@media (min-width: 1399.98px) {
-
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1420px;
+    }
 }
+
+
+
 /* disable hover */
 @media (min-width: 991.98px) {
     .primary-button {
