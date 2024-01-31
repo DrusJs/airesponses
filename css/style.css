@@ -42,9 +42,21 @@ h3.title {
     color: var(--color-text-primary);
     text-transform: uppercase;
 }
+.header {
+    background-color: #4b4aef;
+}
 .header .header-wrapper {
     padding: 14px 0px;
     background-color: #4b4aef;
+    min-width: 345px;
+}
+.header .header-wrapper .nav-item {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition-primary);
+    margin-right: 1rem;
+    white-space: nowrap;
 }
 .header .header-wrapper .header-select {
     position: relative;
@@ -84,10 +96,16 @@ h3.title {
     top: 30px;
     left: 0;
     background-color: var(--color-white);
-    padding: 11px 10px;
+    padding: 20px 0;
     border-radius: 5px;
     box-shadow: 4px 5px 20px 0px rgba(74, 105, 165, 0.16);
     max-width: 180px;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+}
+.header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__item {
+    padding: 4px 16px;
+    transition: var(--transition-primary);
+    cursor: pointer;
 }
 .header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__item .text {
     width: 100%;
@@ -95,6 +113,9 @@ h3.title {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+.header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__item:hover {
+    background-color: #e5e5f8;
 }
 .header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__button {
     color: var(--color-button-primary);
@@ -105,6 +126,7 @@ h3.title {
     text-align: left;
     padding: 0;
     white-space: nowrap;
+    font-size: 12px;
 }
 .header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__button svg {
     min-width: 16px;
@@ -414,7 +436,7 @@ h3.title {
 .search-button {
     border: 1px solid #a8a8be;
     border-radius: 50px;
-    font-size: 16px;
+    font-size: 12px;
     color: #a8a8be;
     background-color: transparent;
     padding: 6px 30px;
@@ -429,12 +451,13 @@ h3.title {
 .search-button input::placeholder {
     font-size: 16px;
     font-weight: 400;
+    color: #a8a8be;
 }
 .shops-table {
     color: var(--color-text-primary);
     border-radius: 10px;
     border-style: hidden;
-    box-shadow: 0 0 0 1px #a8a8be;
+    box-shadow: 0 0 0 1px #bfbfd9;
     background-color: var(--color-white);
     width: 100%;
     overflow: hidden;
@@ -448,8 +471,8 @@ h3.title {
 .shops-table .shops-table-row .shops-table-head {
     font-weight: 600;
     font-size: 12px;
-    border: 1px solid #a8a8be;
-    padding: 10px 12px;
+    border: 1px solid #bfbfd9;
+    padding: 12px 8px;
     vertical-align: bottom;
 }
 .shops-table .shops-table-row .shops-table-head.vertical {
@@ -458,13 +481,13 @@ h3.title {
     transform: rotate(180deg);
     text-align: left;
     vertical-align: top;
-    padding: 10px 2px;
+    padding: 12px 6px;
 }
 .shops-table .shops-table-row .shops-table-head.vertical div {
     max-height: 14ch;
 }
 .shops-table .shops-table-row .shops-table-cell {
-    border: 1px solid #a8a8be;
+    border: 1px solid #bfbfd9;
     text-align: center;
     vertical-align: middle;
     padding: 10px 10px;
@@ -480,11 +503,8 @@ h3.title {
     width: 20px;
 }
 .shops-table .shops-table-row .shops-table-cell .name {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     display: inline-block;
-    max-width: 86%;
+    max-width: 80%;
     text-align: left;
 }
 .shops-table .shops-table-row .shops-table-cell button {
@@ -861,7 +881,7 @@ h3.title {
     margin-bottom: 30px;
 }
 .auth-page .auth-form .auth-form-inner .primary-button {
-    min-width: 180px;
+    min-width: 145px;
 }
 .auth-page .auth-form .auth-form-inner .auth-links {
     width: 100%;
@@ -902,8 +922,14 @@ h3.title {
     body, .p-text, .p-title {
         font-size: 18px;
    }
+   .p-title.medium {
+    font-weight: 500;
+   }
     body.size, .p-text.size, .p-title.size {
         font-size: 18px;
+   }
+    .search-button {
+        font-size: 16px;
    }
     .copy-icon {
         width: 20px;
@@ -930,8 +956,14 @@ h3.title {
     .header .header-wrapper {
         padding: 20px 0px;
    }
+    .header .header-wrapper .nav-item {
+        font-size: 18px;
+   }
     .header .header-wrapper .header-select .header-select-head {
-        padding: 4px 20px 4px 10px;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 7px 20px 8px 10px;
+        margin-right: 20px;
    }
     .header .header-wrapper .header-select .header-select-head::after {
         content: "";
@@ -947,6 +979,9 @@ h3.title {
    }
     .header .header-wrapper .header-select .header-select-dropdown {
         top: 46px;
+   }
+    .header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__button {
+        font-size: 14px;
    }
     .header .header-wrapper .header-select .header-select-dropdown .header-select-dropdown__button svg {
         width: 22px;
@@ -1089,10 +1124,10 @@ h3.title {
    }
     .primary-button {
         font-size: 14px;
-        padding: 15px 30px;
+        padding: 16px 36px;
    }
     .primary-button.border-button {
-        font-weight: 500;
+        font-weight: 700;
    }
     .primary-button.blue.large {
         padding: 20px 90px;
@@ -1128,6 +1163,7 @@ h3.title {
         transform: rotate(0deg);
         text-align: left;
         vertical-align: middle;
+        padding: 30px 18px;
    }
     .tariff-flex .tariff-flex-col {
         width: calc(33.333% - 20px);
@@ -1187,6 +1223,7 @@ h3.title {
         color: var(--color-text-primary);
         font-size: 24px;
         text-align: center;
+        font-weight: 400;
         margin-bottom: 40px;
    }
     .auth-page .auth-form .auth-form-inner .auth-links {
@@ -1262,6 +1299,11 @@ h3.title {
         height: 24px;
    }
 }
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1420px;
+   }
+}
 /* disable hover */
 @media (min-width: 991.98px) {
     .primary-button:hover {
@@ -1274,5 +1316,8 @@ h3.title {
    }
     .primary-button.blue:hover {
         background-color: #3a3abc;
+   }
+    .header .header-wrapper .nav-item:hover {
+        color: #95f5d3;
    }
 }
