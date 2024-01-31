@@ -881,7 +881,7 @@ h3.title {
     margin-bottom: 30px;
 }
 .auth-page .auth-form .auth-form-inner .primary-button {
-    min-width: 180px;
+    min-width: 145px;
 }
 .auth-page .auth-form .auth-form-inner .auth-links {
     width: 100%;
@@ -921,6 +921,9 @@ h3.title {
 @media (min-width: 767.98px) {
     body, .p-text, .p-title {
         font-size: 18px;
+   }
+   .p-title.medium {
+    font-weight: 500;
    }
     body.size, .p-text.size, .p-title.size {
         font-size: 18px;
@@ -1220,6 +1223,7 @@ h3.title {
         color: var(--color-text-primary);
         font-size: 24px;
         text-align: center;
+        font-weight: 400;
         margin-bottom: 40px;
    }
     .auth-page .auth-form .auth-form-inner .auth-links {

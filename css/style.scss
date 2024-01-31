@@ -1008,7 +1008,7 @@ h3.title {
             }
 
             .primary-button {
-                min-width: 180px;
+                min-width: 145px;
             }
 
             .auth-links {
@@ -1069,6 +1069,11 @@ h3.title {
         font-size: 18px;
         &.size {
             font-size: 18px;
+        }
+    }
+    .p-title {
+        &.medium {
+            font-weight: 500;
         }
     }
     .search-button {
@@ -1441,6 +1446,7 @@ h3.title {
                     color: var(--color-text-primary);
                     font-size: 24px;
                     text-align: center;
+                    font-weight: 400;
                     margin-bottom: 40px;
                 }
     
