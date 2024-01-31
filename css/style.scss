@@ -48,10 +48,20 @@ h3.title {
 
 .header {
     background-color: #4B4AEF;
-    
+
     .header-wrapper {
         padding: 14px 0px;
         background-color: #4B4AEF;
+        min-width: 345px;
+
+        .nav-item {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition-primary);
+            margin-right: 1rem;
+            white-space: nowrap;
+        }
 
         .header-select {
             position: relative;
@@ -478,7 +488,7 @@ h3.title {
 .search-button {
     border: 1px solid #A8A8BE;
     border-radius: 50px;
-    font-size: 16px;
+    font-size: 12px;
     color: #A8A8BE;
     background-color: transparent;
     padding: 6px 30px;
@@ -493,6 +503,7 @@ h3.title {
         &::placeholder {
             font-size: 16px;
             font-weight: 400;
+            color: #a8a8be;
         }
     }
 }
@@ -1060,6 +1071,9 @@ h3.title {
             font-size: 18px;
         }
     }
+    .search-button {
+        font-size: 16px;
+    }
     .copy-icon {
         width: 20px;
     }
@@ -1087,10 +1101,15 @@ h3.title {
     .header {
         .header-wrapper {
             padding: 20px 0px;
-
+            .nav-item {
+                font-size: 18px;
+            }
           .header-select {
             .header-select-head {
-                padding: 4px 20px 4px 10px;
+                font-size: 14px;
+                font-weight: 500;
+                padding: 7px 20px 8px 10px;
+                margin-right: 20px;
 
                 &::after {
                     content: "";
@@ -1545,4 +1564,15 @@ h3.title {
             background-color: #3A3ABC;;
         }
     }
+    .header {
+        .header-wrapper {
+            .nav-item {
+        
+                &:hover {
+                    color: #95f5d3;
+                }
+            }
+        }
+      }
+
 }
