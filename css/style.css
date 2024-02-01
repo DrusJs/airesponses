@@ -1310,6 +1310,26 @@ h3.title {
         max-width: 1420px;
    }
 }
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1420px;
+   }
+}
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 1420px;
+   }
+}
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 1420px;
+   }
+}
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 1420px;
+   }
+}
 /* disable hover */
 @media (min-width: 991.98px) {
     .primary-button:hover {
