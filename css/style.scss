@@ -106,6 +106,7 @@ h3.title {
                 border-radius: 5px;
                 box-shadow: 4px 5px 20px 0px rgba(74, 105, 165, 0.16);
                 max-width: 180px;
+                width: 180px;
                 border: 1px solid rgba(0, 0, 0, .175);
 
                 .header-select-dropdown__item {
@@ -119,6 +120,7 @@ h3.title {
                         overflow: hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
+                        margin-left: 1px;
                     }
                     &:hover {
                         background-color: #e5e5f8;
@@ -1053,6 +1055,13 @@ h3.title {
             .header-select {
                 .header-select-dropdown {
                     max-width: 350px;
+                    width: 350px;
+
+                    .header-select-dropdown__item {
+                        .text {                        
+                            font-size: 16px;
+                        }
+                    }
                 }
             }
         }
@@ -1550,6 +1559,26 @@ h3.title {
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1420px;
+    }
+}
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1420px;
+    }
+}
+  @media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+    max-width: 1420px;
+    }
+}
+  @media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+    max-width: 1420px;
+    }
+}
+  @media (min-width: 576px) {
+    .container, .container-sm {
+    max-width: 1420px;
     }
 }
 
