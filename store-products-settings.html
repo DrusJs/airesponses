@@ -83,8 +83,8 @@
 
             <main class="main">
                 <div class="container main-container">
-                    <div class="d-flex justify-content-between">
-                        <a href="index.html"><button class="primary-button d-none d-lg-block uppercase mb-2">К списку магазинов</button></a>
+                    <div class="d-flex justify-content-between flex-column flex-lg-row gap-md-1 gap-3">
+                        <a href="index.html"><button class="primary-button d-block uppercase mb-2">К списку магазинов</button></a>
                         <div class="action-panel d-flex justify-content-between gap-2 mb-2">
                             <a href="#" class="action-link d-flex align-items-center gap-2">
                                 <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,11 +110,20 @@
                         <div class="row">
                             <div class="col-12 md-4 col-md-6 mb-md-5 mb-3">
                                 <div class="product-item">
-                                    <div class="d-flex align-items-center gap-4">
-                                        <div class="input-wrapper d-flex flex-column gap-2 w-100">
-                                            <input type="text" class="primary-input" placeholder="Название магазина">
+                                    <div class="d-flex align-items-center justify-content-between gap-4">
+                                        <div class="select-inner border">
+                                            <div class="select-head d-flex align-items-center gap-2">
+                                                <div class="value">Дружелюбно</div>
+                                                <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.71899 0.233013C9.54199 0.0840056 9.30099 0 9.05099 0C8.79999 0 8.55999 0.0840056 8.38199 0.233013L4.97601 3.06614L1.618 0.233013C1.44 0.0840056 1.2 0 0.949005 0C0.699005 0 0.458006 0.0840056 0.281006 0.233013C0.192006 0.307016 0.120998 0.396015 0.072998 0.493019C0.024998 0.591024 0 0.695027 0 0.801032C0 0.907037 0.024998 1.01104 0.072998 1.10905C0.120998 1.20605 0.192006 1.29506 0.281006 1.36907L4.30301 4.76322C4.39101 4.83823 4.49599 4.89823 4.61099 4.93823C4.72699 4.97924 4.85101 5.00023 4.97601 5.00023C5.10201 5.00023 5.226 4.97924 5.341 4.93823C5.457 4.89823 5.56199 4.83823 5.64999 4.76322L9.71899 1.36907C9.80799 1.29506 9.879 1.20605 9.927 1.10905C9.975 1.01104 10 0.907037 10 0.801032C10 0.695027 9.975 0.591024 9.927 0.493019C9.879 0.396015 9.80799 0.307016 9.71899 0.233013Z" fill="#A8A8BE"/>
+                                                </svg>
+                                            </div>
+                                            <div class="select-dropdown">
+                                                <div class="select-dropdown__item">Дружелюбно</div>
+                                                <div class="select-dropdown__item">Формально</div>
+                                            </div>
                                         </div>
-                                        <div class="hint-primary align-self-end mb-2 mb-md-3">
+                                        <div class="hint-primary align-self-end mb-2">
                                             <img src="images/hint icon 1.svg" alt="" class="hint-button">
                                             <div class="hint-container d-none"></div>
                                         </div>
