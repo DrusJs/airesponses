@@ -737,6 +737,9 @@
     align-items: center;
     width: 100%;
   }
+  .select-inner.border .select-dropdown {
+    width: 100%;
+  }
   .select-inner.active .select-head svg {
     transform: rotate(180deg);
   }
@@ -758,7 +761,6 @@
     background: #fff;
     box-shadow: 4px 5px 20px #4a69a529;
     border: 0;
-    width: 100%;
     right: 0;
     top: 40px;
     opacity: 0;

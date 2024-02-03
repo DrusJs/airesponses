@@ -833,6 +833,10 @@ h3.title {
             align-items: center;
             width: 100%;
         }
+
+        .select-dropdown {            
+            width: 100%;
+        }
     }
 
     &.active {
@@ -864,7 +868,6 @@ h3.title {
         background: #fff;
         box-shadow: 4px 5px 20px #4a69a529;
         border: 0;
-        width: 100%;
         right: 0;
         top: 40px;
         opacity: 0;
