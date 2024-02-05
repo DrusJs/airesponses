@@ -48,7 +48,39 @@ if (reviewElementShow.length) {
             this.classList.toggle('active')
             hideBlock.classList.toggle('active')            
             
-            hideBlock.style.maxHeight = hideBlock.classList.contains('active')?hideBlock.scrollHeight+'px':'0px'
+            hideBlock.style.maxHeight = hideBlock.classList.contains('active')?+hideBlock.scrollHeight+600+'px':'0px'
         })
     })
 }
+
+const selectInnerElement = document.querySelectorAll('.select-inner .select-head')
+
+if (selectInnerElement.length) {
+    selectInnerElement.forEach(el=> {
+        el.addEventListener('click', function() {
+            if (!this.closest('.select-inner').classList.contains('active') && document.querySelector('.select-inner.active')) {
+                document.querySelector('.select-inner.active').classList.remove('active')
+            }
+            this.closest('.select-inner').classList.toggle('active')
+        })
+        el.parentElement.querySelectorAll('.select-dropdown__item').forEach(el=>{
+            el.addEventListener('click', function() {
+                this.closest('.select-inner').classList.remove('active')
+                this.closest('.select-inner').querySelector('.select-head .value').innerHTML = this.innerHTML.trim()
+            })
+        })
+    })
+}
+
+if (document.querySelector('textarea.review-overflow')) {
+    document.querySelectorAll('textarea.review-overflow').forEach(el => {
+        el.style.height = el.setAttribute('style', 'min-height: ' + el.scrollHeight + 'px');
+        el.classList.add('auto');
+        el.addEventListener('input', e => {
+          el.style.minHeight = 'auto';
+          el.style.minHeight = (el.scrollHeight) + 'px';
+        });
+    });
+}
+
+
