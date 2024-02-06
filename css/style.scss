@@ -426,6 +426,10 @@ h3.title {
             max-height: fit-content;
             margin: 20px 0;
         }
+        &.visible {
+            opacity: 1;
+            max-height: fit-content;
+        }
     }
 
     .review-state {
@@ -1358,6 +1362,12 @@ h3.title {
     
             .text {
                 font-size: 16px;
+            }
+            &.visible {
+                max-width: 250px;
+            }
+            &.stat {
+                max-width: 150px;
             }
         }
     
