@@ -362,6 +362,8 @@ h3.title {
     .product-settings {
         font-size: 16px;
         color: var(--color-button-primary);
+        border: none;
+        background-color: transparent;
     }
     .edit-info {
         font-size: 8px;
@@ -396,30 +398,7 @@ h3.title {
             font-weight: 500;
         }
 
-        .product-analytics {
-            padding: 20px 15px;
-            border: 1px solid var(--color-text-primary);
-            border-radius: 10px;
-            
-            .title {
-                color: var(--color-text-primary);
-                font-size: 16px;
-                font-weight: 700;
-                text-transform: uppercase;
-            }
-            .head {
-                color: var(--color-text-primary);
-                font-size: 16px;
-                font-weight: 700;
-            }
-            .text {
-                color: #A8A8BE;
-                font-size: 16px;
-                font-weight: 400;
-                overflow-y: scroll;
-                overflow-x: hidden;
-            }
-        }
+
 
         &.active {
             opacity: 1;
@@ -429,6 +408,39 @@ h3.title {
         &.visible {
             opacity: 1;
             max-height: fit-content;
+        }
+    }
+    .product-analytics {
+        padding: 20px 15px;
+        border: 1px solid var(--color-text-primary);
+        border-radius: 10px;
+        
+        &.inner {
+            padding: 0;
+            border: none;
+        }
+        .title {
+            color: var(--color-text-primary);
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .head {
+            color: var(--color-text-primary);
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .text {
+            color: #A8A8BE;
+            font-size: 16px;
+            font-weight: 400;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            
+            &.flow {
+                max-height: 230px;
+                padding-right: 5px;
+            }
         }
     }
 
