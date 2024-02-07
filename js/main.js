@@ -29,7 +29,7 @@ if (productElementShow.length) {
     productElementShow.forEach(el=>{
         el.addEventListener('click', function(event) {
             let container = this.closest('.product-item')
-            let hideBlock = container.querySelector('.product-dropdown-info')
+            let hideBlock = container.querySelector('.product-dropdown-info.js-mobile')
             this.classList.toggle('active')
             hideBlock.classList.toggle('active')            
             
