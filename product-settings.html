@@ -252,68 +252,80 @@
                                 </div>
                             </div>
                             <h2 class="title">Настройки и рекомендации</h2>
-                            <div class="product-item">
-                                <div class="d-flex align-items-center gap-3  mb-3">
-                                    <div class="text">Включить рекомендации</div>
-                                    <input type="checkbox" name="" id="">
-                                </div>
-                                <div class="input-wrapper d-flex flex-column gap-2 mb-3">
-                                    <span class="primary-input-label">Рекомендуемый артикул</span>
-                                    <input type="text" class="primary-input small" placeholder="123123123123">
-                                    <div class="input-hint">
-                                        <img src="images/hint icon 1.svg" alt="" class="hint-button">
-                                        <div class="hint-container d-none"></div>
+                            <div class="d-flex flex-column flex-lg-row gap-md-4 gap-3">
+                                <div class="product-item w-100">
+                                    <div class="d-flex align-items-center gap-3  mb-3">
+                                        <div class="text">Включить рекомендации</div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="input-wrapper d-flex flex-column gap-2 mb-3">
+                                        <span class="primary-input-label">Рекомендуемый артикул</span>
+                                        <input type="text" class="primary-input small" placeholder="123123123123">
+                                        <div class="input-hint">
+                                            <img src="images/hint icon 1.svg" alt="" class="hint-button">
+                                            <div class="hint-container d-none"></div>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper d-flex flex-column gap-2">
+                                        <span class="primary-input-label">Текст рекомендации</span>
+                                        <input type="text" class="primary-input  small" placeholder="Вы можете ознакомиться с другими товар...">
+                                        <div class="input-hint">
+                                            <img src="images/hint icon 1.svg" alt="" class="hint-button">
+                                            <div class="hint-container d-none"></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="input-wrapper d-flex flex-column gap-2">
-                                    <span class="primary-input-label">Текст рекомендации</span>
-                                    <input type="text" class="primary-input  small" placeholder="Вы можете ознакомиться с другими товар...">
-                                    <div class="input-hint">
-                                        <img src="images/hint icon 1.svg" alt="" class="hint-button">
-                                        <div class="hint-container d-none"></div>
+                                <div class="product-item w-100">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="text">Использовать ключевые слова</div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="input-wrapper d-flex flex-column gap-2 mb-3">
+                                        <span class="primary-input-label">Ключевые слова</span>
+                                        <input type="text" class="primary-input  small" placeholder="Введите ключевое слово и нажмите Enter">
+                                        <div class="input-hint">
+                                            <img src="images/hint icon 1.svg" alt="" class="hint-button">
+                                            <div class="hint-container d-none"></div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <div class="keyword d-flex align-items-center justify-content-between">
+                                            <span class="text">Ключевое слово 1</span>
+                                            <button class="remove-button"></button>
+                                        </div>
+                                        <div class="keyword d-flex align-items-center justify-content-between">
+                                            <span class="text">Ключевое слово 2</span>
+                                            <button class="remove-button"></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-item">
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="text">Использовать ключевые слова</div>
-                                    <input type="checkbox" name="" id="">
-                                </div>
-                                <div class="input-wrapper d-flex flex-column gap-2 mb-3">
-                                    <span class="primary-input-label">Ключевые слова</span>
-                                    <input type="text" class="primary-input  small" placeholder="Введите ключевое слово и нажмите Enter">
-                                    <div class="input-hint">
-                                        <img src="images/hint icon 1.svg" alt="" class="hint-button">
-                                        <div class="hint-container d-none"></div>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <div class="keyword d-flex align-items-center justify-content-between">
-                                        <span class="text">Ключевое слово 1</span>
-                                        <button class="remove-button"></button>
-                                    </div>
-                                    <div class="keyword d-flex align-items-center justify-content-between">
-                                        <span class="text">Ключевое слово 2</span>
-                                        <button class="remove-button"></button>
-                                    </div>
-                                </div>
-                            </div>
+
                             <h2 class="title">Настройки подписи</h2>
                             <div class="product-item">
-                                <div class="input-wrapper d-flex flex-column gap-2 mb-3">
-                                    <span class="primary-input-label">Какую подпись использовать</span>
-                                    <input type="text" class="primary-input  small" placeholder="Название магазина">
-                                    <div class="input-hint">
-                                        <img src="images/hint icon 1.svg" alt="" class="hint-button">
-                                        <div class="hint-container d-none"></div>
+                                <div class="d-flex flex-column flex-lg-row w-100 gap-3 gap-lg-5">
+                                    <div class="input-wrapper d-flex flex-column justify-content-between gap-2 w-100">
+                                        <span class="primary-input-label">Какую подпись использовать</span>
+                                        <div class="select-inner border mb-2 w-100">
+                                            <div class="select-head d-flex align-items-center gap-2">
+                                                <div class="value">Как указано в настройках магазина</div>
+                                                <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.71899 0.233013C9.54199 0.0840056 9.30099 0 9.05099 0C8.79999 0 8.55999 0.0840056 8.38199 0.233013L4.97601 3.06614L1.618 0.233013C1.44 0.0840056 1.2 0 0.949005 0C0.699005 0 0.458006 0.0840056 0.281006 0.233013C0.192006 0.307016 0.120998 0.396015 0.072998 0.493019C0.024998 0.591024 0 0.695027 0 0.801032C0 0.907037 0.024998 1.01104 0.072998 1.10905C0.120998 1.20605 0.192006 1.29506 0.281006 1.36907L4.30301 4.76322C4.39101 4.83823 4.49599 4.89823 4.61099 4.93823C4.72699 4.97924 4.85101 5.00023 4.97601 5.00023C5.10201 5.00023 5.226 4.97924 5.341 4.93823C5.457 4.89823 5.56199 4.83823 5.64999 4.76322L9.71899 1.36907C9.80799 1.29506 9.879 1.20605 9.927 1.10905C9.975 1.01104 10 0.907037 10 0.801032C10 0.695027 9.975 0.591024 9.927 0.493019C9.879 0.396015 9.80799 0.307016 9.71899 0.233013Z" fill="#A8A8BE"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="select-dropdown">
+                                                <div class="select-dropdown__item">Как указано в настройках магазина</div>
+                                                <div class="select-dropdown__item">Как указано в настройках магазина2</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="input-wrapper d-flex flex-column gap-2">
-                                    <span class="primary-input-label">Своя подпись</span>
-                                    <input type="text" class="primary-input  small" placeholder="Название магазина">
-                                    <div class="input-hint">
-                                        <img src="images/hint icon 1.svg" alt="" class="hint-button">
-                                        <div class="hint-container d-none"></div>
+                                    <div class="input-wrapper d-flex flex-column gap-2 w-100">
+                                        <span class="primary-input-label">Своя подпись</span>
+                                        <input type="text" class="primary-input  small" placeholder="Название магазина">
+                                        <div class="input-hint">
+                                            <img src="images/hint icon 1.svg" alt="" class="hint-button">
+                                            <div class="hint-container d-none"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
