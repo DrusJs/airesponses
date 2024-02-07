@@ -727,7 +727,7 @@ h3.title {
   font-size: 12px;
 }
 .primary-input.small + .input-hint {
-  bottom: 12px;
+  bottom: 6px;
 }
 .select-inner {
   position: relative;
