@@ -12,7 +12,11 @@ body {
     font-size: 12px;
     background-color: var(--color-page);
     color: var(--color-text-primary);
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
+
 a {
     text-decoration: none;
 }

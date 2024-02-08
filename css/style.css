@@ -12,6 +12,9 @@ body {
   background-color: var(--color-page);
   color: var(--color-text-primary);
 }
+body.no-scroll {
+  overflow: hidden;
+}
 a {
   text-decoration: none;
 }
