@@ -187,7 +187,7 @@ h3.title {
 }
 .header .header-wrapper .burger-menu {
   background-color: var(--color-white);
-  padding: 20px 15px 50px;
+  padding: 20px 15px 100px;
   min-width: 150px;
   height: calc(100vh - 70px);
   transition: var(--transition-primary);
