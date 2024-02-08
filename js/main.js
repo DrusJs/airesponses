@@ -4,11 +4,13 @@ const burgerContainer = document.getElementById('burger-menu')
 if (burger) {
     burger.addEventListener('click', function(event) {
         burger.classList.toggle('active')
+        document.body.classList.toggle('no-scroll')
         burgerContainer.closest('.burger-blur').classList.toggle('active')
     })
     burgerContainer.closest('.burger-blur').addEventListener('click', function(event) {
         if (event.target.classList.contains('burger-blur')) {
             burger.classList.remove('active')
+            document.body.classList.remove('no-scroll')
             burgerContainer.closest('.burger-blur').classList.remove('active')
         }        
     })
